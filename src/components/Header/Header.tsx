@@ -4,15 +4,17 @@ import styles from './Header.module.css'
 export const Header = () => {
     return (
         <div className={styles.headerWrapper}>
-            <span>Stats </span>
+            <div className={styles.headerText}>
+                <span>Stats </span>
 
-            <span>Inv </span>
+                <span>Inv </span>
 
-            <span>Data </span>
+                <span>Data </span>
 
-            <span>Map </span>
+                <span>Map </span>
 
-            <span>Radio </span>
+                <span>Radio </span>
+            </div>
         </div>
     )
 }

@@ -1,5 +1,9 @@
 .headerWrapper {
     grid-area: h;
-    background-color: green;
+    background-color: #004200;
     padding: 5px;
+}
+
+.headerText {
+    color: #92f251;
 }
