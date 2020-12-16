@@ -25,3 +25,5 @@ yarn-error.log*
 .eslintcache
 
 /apolloserv/node_modules
+
+/server/node_modules
