@@ -13,8 +13,7 @@ type Pony {
   }
 
   type Query {
-      getPony(id: String!): Pony!
-      ponies: [Pony!]
+      getPonies: [Pony!]
   }
 
   type Mutation {

@@ -1,7 +1,16 @@
+const Pony = require('../models/pony')
+
 module.exports = {
     Query: {
-        getPony: (_, args) => ponies.find(pony => pony.id === args.id),
-        ponies: () => ponies
+        async getPonies() {
+            try {
+                const ponies = Pony.find();
+                return ponies;
+            }
+            catch {
+                console.log(err);
+            }
+        }
     },
     Mutation: {
         addPony: (_, args) => {
