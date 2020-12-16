@@ -1,33 +1,16 @@
-const { ApolloServer, gql } = require('apollo-server');
+const { ApolloServer } = require('apollo-server');
+const resolvers = require('./resolvers/resolvers')
+const typeDefs = require('./typeDefs/typeDefs')
 
-
-const ponies = [
+/* const ponies = [
     {
+        id: '1',
         name: 'LittlePip',
         age: 20,
+        gender: ['FEMALE']
     },
-];
+]; */
 
-
-
-
-
-const typeDefs = gql`
-type Pony {
-    name: String
-    age: Int
-  }
-
-  type Query {
-      ponies: [Pony]
-  }
-`
-
-const resolvers = {
-    Query: {
-        ponies: () => ponies
-    }
-}
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
