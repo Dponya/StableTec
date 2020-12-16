@@ -14,6 +14,8 @@ export const Header = () => {
                 <span>Map </span>
 
                 <span>Radio </span>
+
+                <span>Wasteland Weather</span>
             </div>
         </div>
     )
