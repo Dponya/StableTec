@@ -1,0 +1,10 @@
+.radioWrapper {
+    grid-area: cont;
+    background-color: #004200;
+    padding: 5px;
+}
+
+.radioText {
+    color: #92f251;
+    text-decoration: none;
+}

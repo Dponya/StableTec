@@ -1,0 +1,10 @@
+.dataWrapper {
+    grid-area: cont;
+    background-color: #004200;
+    padding: 5px;
+}
+
+.dataText {
+    color: #92f251;
+    text-decoration: none;
+}
