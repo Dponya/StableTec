@@ -2,6 +2,11 @@
     grid-area: cont;
     background-color: #004200;
     padding: 5px;
+    grid-template-areas:
+    "todo";
+    grid-template-rows: 1fr 10fr 4fr;
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
 }
 
 .dataText {

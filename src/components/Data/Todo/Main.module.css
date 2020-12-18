@@ -1,0 +1,10 @@
+.mainWrapper {
+    grid-area: todo;
+    background-color: #004200;
+    padding: 5px;
+    grid-template-areas:
+    "task";
+    grid-template-rows: 1fr 5fr 4fr;
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+}
