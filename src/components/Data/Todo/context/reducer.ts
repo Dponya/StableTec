@@ -1,12 +1,12 @@
 import React from "react";
-
-export const ContextApp = React.createContext(null);
+import { contextDefaultValue } from "./types/types";
 
 export const initialState = {
-    app: {
-        test: 'test_context'
-    }
+    state: ['do', 'le', 'me'],
+    dispatch: null
 };
+
+export const ContextApp = React.createContext(contextDefaultValue);
 
 export const testReducer = (state: any, action: any) => {
     switch (action.type) {

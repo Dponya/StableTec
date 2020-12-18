@@ -1,12 +1,14 @@
-import React from 'react';
+import { stat } from 'fs';
+import React, { useContext } from 'react';
+import { ContextApp } from '../context/reducer';
 
 export const ListItems = () => {
 
-    const items = ['do', 'le', 'mi', 'fa', 'so', 'le']
+    const { state, dispatch } = useContext(ContextApp);
 
     return (
         <div>
-            {items.map((li) => (
+            {state.map((li: React.ReactNode) => (
                 <li>{li}</li>
             ))}
         </div>
