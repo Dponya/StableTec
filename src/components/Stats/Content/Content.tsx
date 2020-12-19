@@ -14,6 +14,7 @@ const LIST_COUNTRIES = gql`
 export const Content = () => {
   const { loading, error, data } = useQuery(LIST_COUNTRIES);
   if (loading) return <p>Loading...</p>;
+  console.log(data)
   if (error) return <p>Error :(</p>;
   return (
     <div className={styles.contentWrapper}>

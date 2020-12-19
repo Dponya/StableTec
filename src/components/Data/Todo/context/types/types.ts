@@ -4,6 +4,6 @@ interface T2 {
 }
 
 export let contextDefaultValue: T2 = {
-    state: null,
+    state: [],
     dispatch: null,
 };

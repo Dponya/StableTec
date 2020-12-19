@@ -4,13 +4,11 @@ import { ContextApp } from '../context/reducer';
 
 export const ListItems = () => {
 
-    const { state, dispatch } = useContext(ContextApp);
+    const types = useContext(ContextApp);
 
     return (
         <div>
-            {state.map((li: React.ReactNode) => (
-                <li>{li}</li>
-            ))}
+            {types.dOne}
         </div>
     )
 }
