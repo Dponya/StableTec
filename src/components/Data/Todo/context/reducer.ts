@@ -1,12 +1,5 @@
 import React from "react";
-import { Action, State, ContextState, ActionType } from "../context/types/stateTypes"
-
-export const initialState: State = {
-    newTask: '',
-    tasks: []
-}
-
-export const ContextApp = React.createContext<Partial<ContextState>>({});
+import { Action, State, ActionType } from "../context/types/stateTypes"
 
 
 export const todoReducer = (state: State, action: Action): State => {

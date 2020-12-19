@@ -1,8 +1,9 @@
-import React, { useReducer } from 'react';
+import React, { useContext, useReducer } from 'react';
 import { useForm } from "react-hook-form";
-import { initialState, todoReducer } from '../context/reducer';
+import { todoReducer } from '../context/reducer';
 import { Action, ActionType, State } from '../context/types/stateTypes';
 import { TaskName } from '../context/types/taskTypes';
+import { ContextApp, initialState } from '../Main';
 /* import { testReducer } from '../context/reducer'; */
 
 
@@ -13,8 +14,9 @@ type Inputs = {
 
 
 
-export const Panel = () => {
-    const [state, changeState] = useReducer<React.Reducer<State, Action>>(todoReducer, initialState);
+export const Panel: React.FC = () => {
+    //const [state, changeState] = useReducer<React.Reducer<State, Action>>(todoReducer, initialState);
+    const { state, changeState } = useContext(ContextApp);
     const { register, handleSubmit, watch, errors } = useForm<Inputs>();
 
     const addTask = (/* event: React.FormEvent<HTMLFormElement>, */ task: TaskName) => {
