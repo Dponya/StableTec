@@ -4,11 +4,11 @@ import { ContextApp } from '../context/reducer';
 
 export const ListItems = () => {
 
-    const types = useContext(ContextApp);
+    //const types = useContext(ContextApp);
 
     return (
         <div>
-            {types.dOne}
+            hello
         </div>
     )
 }
