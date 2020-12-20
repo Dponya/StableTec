@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { ContextApp } from '../Main'
-import { ActionType } from '../context/types/stateTypes';
-import { Task } from '../context/types/taskTypes';
+import { ActionType } from '../TStypes/stateTypes';
+import { Task } from '../TStypes/taskTypes';
 
 export const ListItems: React.FC = () => {
 
-    const { state, changeState } = useContext(ContextApp);
+    const { state, changeState } = useContext<any>(ContextApp);
 
     const removeTask = (taskForRemoving: Task) => {
         changeState({ type: ActionType.Remove, payload: taskForRemoving })
@@ -17,8 +17,8 @@ export const ListItems: React.FC = () => {
     return (
         <>
             <ul>
-                {state.tasks.map((task, i) => (
-                    <li key={i} className={task.isDone ? 'ready' : null}>
+                {state.tasks.map((task: { isDone: any; name: any; }, i: string | number | null | undefined) => (
+                    <li key={i}/*  className={task.isDone ? 'ready' : null} */>
                         <label>
                             <input type="checkbox" onChange={() => toggleReadiness(task)} checked={task.isDone} />
                         </label>

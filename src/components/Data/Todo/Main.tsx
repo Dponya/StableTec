@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
-import { todoReducer } from './context/reducer';
-import { Action, ContextState, State } from './context/types/stateTypes';
+import { todoReducer } from './ContextAPI/todoReducer';
+import { Action, ContextState, State } from './TStypes/stateTypes';
 import { ListItems } from './ListItems/ListItems';
 import styles from './Main.module.css'
 import { Panel } from './Panel/Panel';

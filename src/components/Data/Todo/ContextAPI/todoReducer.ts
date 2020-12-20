@@ -1,5 +1,5 @@
 import React from "react";
-import { Action, State, ActionType } from "../context/types/stateTypes"
+import { Action, State, ActionType } from "../TStypes/stateTypes"
 
 
 export const todoReducer = (state: State, action: Action): State => {

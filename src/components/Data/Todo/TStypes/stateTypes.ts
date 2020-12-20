@@ -29,5 +29,5 @@ export type Action = ActionStringPayload | ActionObjectPayload;
 
 export type ContextState = {
     state: State;
-    changeState: () => Action//Dispatch<Action>
+    changeState: Dispatch<Action>
 }

@@ -1,10 +1,8 @@
-import React, { useContext, useReducer } from 'react';
+import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
-import { todoReducer } from '../context/reducer';
-import { Action, ActionType, State } from '../context/types/stateTypes';
-import { TaskName } from '../context/types/taskTypes';
-import { ContextApp, initialState } from '../Main';
-/* import { testReducer } from '../context/reducer'; */
+import { ActionType } from '../TStypes/stateTypes';
+import { TaskName } from '../TStypes/taskTypes';
+import { ContextApp } from '../Main';
 
 
 type Inputs = {
@@ -15,12 +13,10 @@ type Inputs = {
 
 
 export const Panel: React.FC = () => {
-    //const [state, changeState] = useReducer<React.Reducer<State, Action>>(todoReducer, initialState);
-    const { state, changeState } = useContext(ContextApp);
+    const { state, changeState } = useContext<any>(ContextApp);
     const { register, handleSubmit, watch, errors } = useForm<Inputs>();
 
-    const addTask = (/* event: React.FormEvent<HTMLFormElement>, */ task: TaskName) => {
-        /* event.preventDefault(); */
+    const addTask = (task: TaskName) => {
         changeState({ type: ActionType.Add, payload: task })
         changeState({ type: ActionType.Change, payload: '' })
     }
@@ -29,7 +25,7 @@ export const Panel: React.FC = () => {
         changeState({ type: ActionType.Change, payload: event.target.value })
     }
 
-    const onSubmit = (data: any) => (addTask(data))
+    const onSubmit = (data: any) => (addTask(data.exampleRequired))
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
