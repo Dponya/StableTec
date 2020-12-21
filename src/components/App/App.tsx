@@ -9,8 +9,8 @@ import { Stats } from '../Stats/Stats'
 import { Data } from '../Data/Data'
 import { Map } from '../Map/Map'
 import { Radio } from '../Radio/Radio'
-import { Weather } from '../Weather/Weather'
 import './App.css';
+import { WeatherContainer } from '../Weather/WeatherContainer';
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -44,7 +44,7 @@ export const App = () => {
         </Route>
 
         <Route path={'/weather'}>
-          <Weather />
+          <WeatherContainer />
         </Route>
 
         <Footer />

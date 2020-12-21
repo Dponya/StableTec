@@ -12,7 +12,6 @@ export const todoReducer = (state: State, action: Action): State => {
                 }]
             }
         case ActionType.Change:
-            debugger;
             return {
                 ...state, newTask: action.payload
             }
