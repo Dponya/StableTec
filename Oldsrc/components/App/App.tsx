@@ -21,7 +21,10 @@ export const App = () => {
   return (
     <ApolloProvider client={client}>
       <div className="appWrapper">
-        <Header />
+        <Route path={'/header'}>
+          <Header />
+        </Route>
+
 
         <Route path={'/stats'}>
           <Stats />
