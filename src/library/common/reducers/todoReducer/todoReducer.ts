@@ -1,6 +1,9 @@
-import React from "react";
-import { Action, State, ActionType } from "../TStypes/stateTypes"
+import { Action, State, ActionType } from "./todoTypes"
 
+export const initialState: State = {
+    newTask: '',
+    tasks: []
+}
 
 export const todoReducer = (state: State, action: Action): State => {
     switch (action.type) {

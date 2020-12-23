@@ -1,4 +1,4 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import { Route } from 'react-router-dom';
 import { Header } from '../../modules/Header';
 import { Data } from '../../modules/Data';
@@ -8,11 +8,12 @@ import { Map } from '../../modules/Map';
 import { Inventory } from '../../modules/Inventory';
 import { Radio } from '../../modules/Radio';
 import { Weather } from '../../modules/Weather';
+import styles from '../../App.module.css'
 
 export const Routes = () => {
 
     return (
-        <div>
+        <div className={styles.appWrapper}>
             <Header />
 
             <Route path={'/stats'}>

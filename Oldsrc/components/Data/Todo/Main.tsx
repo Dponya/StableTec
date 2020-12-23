@@ -5,13 +5,6 @@ import { ListItems } from './ListItems/ListItems';
 import styles from './Main.module.css'
 import { Panel } from './Panel/Panel';
 
-export const initialState: State = {
-    newTask: '',
-    tasks: []
-}
-
-export const ContextApp = React.createContext<Partial<ContextState>>({});
-
 export const Main: React.FC = () => {
 
     const [state, changeState] = useReducer<React.Reducer<State, Action>>(todoReducer, initialState);

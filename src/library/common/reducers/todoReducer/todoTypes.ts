@@ -1,5 +1,13 @@
-import { Task, Tasks } from "./taskTypes";
 import { Dispatch } from "react";
+
+export type Task = {
+    name: string;
+    isDone: boolean
+}
+
+export type Tasks = Task[];
+
+export type TaskName = string;
 
 export type State = {
     newTask: string;
@@ -24,8 +32,6 @@ type ActionObjectPayload = {
 }
 
 export type Action = ActionStringPayload | ActionObjectPayload;
-
-/* export type Action = { type: string, payload: string | Task } */
 
 export type ContextState = {
     state: State;
