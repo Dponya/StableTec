@@ -1,11 +1,10 @@
 import { makeAutoObservable } from 'mobx';
-
-interface ITodo {
-    tasks: string[]
-}
+import { uuid } from 'uuidv4';
 
 export class TodoStore {
-    tasks: ITodo[] = [];
+    public tasks: any[] = [
+        { id: uuid(), task: 'type your tasks, boy!' },
+    ];
 
     constructor() {
         makeAutoObservable(this);
@@ -15,7 +14,13 @@ export class TodoStore {
         return this.tasks;
     }
 
-    addTodo(task: ITodo) {
-        this.tasks.push(task);
+    addTodo = (e: any, task: any): void => {
+        e.preventDefault();
+        this.tasks.push({ id: uuid(), task })
+    }
+
+    deleteTodo = (e: any, id: number) => {
+        e.preventDefault()
+        this.tasks = this.tasks.filter(todo => todo.id !== id)
     }
 }
