@@ -1,3 +1,4 @@
-export interface ITodo {
-    tasks: any
+export interface ITask {
+    id: any;
+    task: string
 }

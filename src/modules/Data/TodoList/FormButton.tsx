@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import { ITodo } from '../../../library/common/types&interfaces/interfaces'
 
 interface IFormButtonProps {
-    addTodo: (e: any, task: any) => void;
+    addTodo: (e: React.ChangeEvent<HTMLInputElement>, task: string) => void;
 }
 
 export const FormButton: React.FC<IFormButtonProps> = ({ addTodo }) => {
@@ -11,13 +10,13 @@ export const FormButton: React.FC<IFormButtonProps> = ({ addTodo }) => {
 
     return (
         <div>
-            <form onSubmit={(e) => addTodo(e, newTask)}>
+            <form onSubmit={(e: any) => addTodo(e, newTask)}>
                 <label htmlFor="todo">Todo text</label>
                 <br />
                 <input
                     id="todo"
                     className="todo-input"
-                    onChange={(event) => setTask(event.target.value)}
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => setTask(event.target.value)}
                     value={newTask}
                 />
                 <button type="submit" className="add-btn">
