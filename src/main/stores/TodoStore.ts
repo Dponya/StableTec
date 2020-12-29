@@ -1,4 +1,4 @@
-import { makeAutoObservable } from 'mobx';
+import { action, makeObservable, observable } from 'mobx';
 import { uuid } from 'uuidv4';
 import { ITask } from '../../library/common/types&interfaces/interfaces';
 
@@ -8,7 +8,11 @@ export class TodoStore {
     ];
 
     constructor() {
-        makeAutoObservable(this);
+        makeObservable(this, {
+            tasks: observable,
+            addTodo: action,
+            deleteTodo: action
+        });
     }
 
     get getAllTasks() {
