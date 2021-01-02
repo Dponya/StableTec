@@ -1,0 +1,20 @@
+@import "../../../public/font.scss";
+
+.headerWrapper {
+    grid-area: h;
+    border-bottom: 3px solid #1fc063
+}
+
+.headerOrder {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerText {
+    font-family: 'monofonto';
+    text-decoration: none;
+    color: #1fc063;
+    font-size: 30px;
+}

@@ -1,17 +1,17 @@
 import React from 'react';
-import styles from './Header.module.css'
+import styles from './Header.module.scss'
 import { NavLink } from 'react-router-dom';
 
 export const Header = () => {
     return (
         <div className={styles.headerWrapper}>
-            <div>
+            <div className={styles.headerOrder}>
                 <NavLink to={'/stats'} className={styles.headerText}>
                     <span>Stats </span>
                 </NavLink>
 
                 <NavLink to={'/inv'} className={styles.headerText}>
-                    <span>Inv </span>
+                    <span>Inventory</span>
                 </NavLink >
 
                 <NavLink to={'/data'} className={styles.headerText}>

@@ -4,7 +4,6 @@
     "h"
     "cont"
     "f";
-    grid-template-rows: 1fr 10fr 4fr;
+    grid-template-rows: 1fr 2fr 4fr;
     grid-template-columns: 1fr;
-    grid-gap: 0px;
 }

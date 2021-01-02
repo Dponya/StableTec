@@ -1,10 +1,9 @@
 .mapWrapper {
     grid-area: cont;
-    background-color: #004200;
     padding: 5px;
 }
 
 .mapText {
-    color: #92f251;
+    color: #1fc063;
     text-decoration: none;
 }

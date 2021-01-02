@@ -1,8 +1,7 @@
 .contentWrapper {
     grid-area: c;
-    background-color: #004200;
 }
 
 .contentText {
-    color: #85e04a;
+    color: #1fc063;
 }

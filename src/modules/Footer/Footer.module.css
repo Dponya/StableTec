@@ -1,8 +1,7 @@
 .footerWrapper {
     grid-area: f;
-    background-color:  #004200;
 }
 
 .footerText {
-    color:  #85e04a;
+    color: #1fc063;
 }
