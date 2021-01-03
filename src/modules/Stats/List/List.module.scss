@@ -1,0 +1,18 @@
+.listWrapper {
+    display: flex;
+    margin: 0 -5px;
+    grid-area: l;
+}
+
+.listText {
+    display: flex;
+    flex-direction: column;
+    color: #1fc063;
+    font-family: 'monofonto';
+    list-style-type: none;
+    font-size: 24px;
+}
+
+.listText li {
+    margin-bottom: 1em;
+}

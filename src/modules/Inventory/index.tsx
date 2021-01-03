@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Inventory.module.css'
+import styles from './Inventory.module.scss'
 
 export const Inventory = () => {
     return (

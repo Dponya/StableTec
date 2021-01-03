@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { App } from './App'
 import { StoresProvider, stores } from './main/stores/index'
-import styles from './index.module.css'
 
 ReactDOM.render(
   <React.StrictMode>

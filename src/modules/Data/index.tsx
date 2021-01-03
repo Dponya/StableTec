@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Data.module.css'
+import styles from './Data.module.scss'
 import { observer } from "mobx-react-lite";
 import { FormButton } from './TodoList/FormButton';
 import { ListItems } from './TodoList/ListItems';

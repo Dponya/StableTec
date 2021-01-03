@@ -1,0 +1,21 @@
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    grid-area: c;
+}
+
+.contentText {
+    font-family: 'monofonto';
+    font-size: 24px;
+    color: #1fc063;
+}
+
+.backgroundImg {
+    width: 300px;
+    height: 300px;
+}
+
+.ImgPony {
+    width: 250px;
+    height: 250px;
+}

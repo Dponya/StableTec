@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react-lite';
 import React, { useEffect } from 'react';
 import { useStore } from '../../main/stores/storeHooks';
-import styles from './Weather.module.css'
+import styles from './Weather.module.scss'
 
 export const Weather = observer(() => {
     const weather = useStore('weatherStore');
