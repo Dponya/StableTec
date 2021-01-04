@@ -1,18 +1,23 @@
 import React from 'react'
 import styles from './List.module.scss'
+import { observer } from 'mobx-react-lite';
+import { ISpecial } from '../../../library/common/types&interfaces/interfaces';
 
-export const List = () => {
+interface IListProps {
+    setActive: (i: any) => void;
+    specialList: ISpecial[]
+}
+
+export const List = observer(({ setActive, specialList }: IListProps) => {
+    console.log(specialList[0].active)
+
+
+    const elems = specialList.map(i => <li key={i.id} onClick={() => setActive(i.id)} className={i.active ? styles.active : styles.nonactive}>{i.name}</li>)
     return (
         <div className={styles.listWrapper}>
             <ul className={styles.listText}>
-                <li>Strength     4</li>
-                <li>Perception   7</li>
-                <li>Endurance    5</li>
-                <li>Charisma     4</li>
-                <li>Intelligence 8</li>
-                <li>Agillity     7</li>
-                <li>Luck         5</li>
+                {elems}
             </ul>
         </div>
     )
-}
+})

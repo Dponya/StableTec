@@ -16,3 +16,16 @@
 .listText li {
     margin-bottom: 1em;
 }
+
+li {
+    cursor: pointer;
+}
+
+.active {
+    outline: 2px solid;
+    background: rgba(25, 255, 129, 0.2);
+}
+
+.nonactive {
+    background-color: #000000;
+}
