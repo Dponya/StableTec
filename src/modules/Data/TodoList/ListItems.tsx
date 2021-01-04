@@ -1,6 +1,6 @@
 import React from 'react';
 import { observer } from "mobx-react-lite";
-import { ITask } from '../../../library/common/types&interfaces/interfaces';
+import { ITask } from '../../../library/common/Typing/interfaces';
 
 interface IListItemsProps {
     tasks: Array<ITask>;

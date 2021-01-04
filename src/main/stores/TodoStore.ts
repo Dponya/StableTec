@@ -1,6 +1,6 @@
 import { action, makeObservable, observable } from 'mobx';
 import { uuid } from 'uuidv4';
-import { ITask } from '../../library/common/types&interfaces/interfaces';
+import { ITask } from '../../library/common/Typing/interfaces';
 
 export class TodoStore {
     public tasks: ITask[] = [
