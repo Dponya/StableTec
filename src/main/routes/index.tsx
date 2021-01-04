@@ -1,13 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { Header } from '../../modules/Header';
-import { Data } from '../../modules/Data';
-import { Stats } from '../../modules/Stats';
-import { Footer } from '../../modules/Footer';
-import { Map } from '../../modules/Map';
-import { Inventory } from '../../modules/Inventory';
-import { Radio } from '../../modules/Radio';
-import { Weather } from '../../modules/Weather';
+import { Header, Data, Stats, Footer, Map, Inventory, Radio, Weather } from '../../modules/index';
 import styles from '../../App.module.css'
 
 export const Routes = () => {
