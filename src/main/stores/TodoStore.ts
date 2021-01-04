@@ -19,13 +19,11 @@ export class TodoStore {
         return this.tasks;
     }
 
-    addTodo = (e: React.ChangeEvent<HTMLUnknownElement>, task: string): void => {
-        e.preventDefault();
+    addTodo = (task: string): void => {
         this.tasks.push({ id: uuid(), task })
     }
 
-    deleteTodo = (e: React.ChangeEvent<HTMLInputElement>, id: number) => {
-        e.preventDefault()
+    deleteTodo = (id: number) => {
         this.tasks = this.tasks.filter(todo => todo.id !== id)
     }
 }

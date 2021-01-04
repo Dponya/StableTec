@@ -9,7 +9,7 @@ interface IListItemsProps {
 
 export const ListItems: React.FC<IListItemsProps> = observer(({ tasks, deleteTodo }) => {
 
-    let taskList = tasks.map((t: any) => <li onClick={(e: any) => deleteTodo(e, t.id!)}>{t.task}</li>)
+    const taskList = tasks.map((task: ITask) => <li key={task.id} onClick={(e: any) => deleteTodo(e, task.id!)}>{task.task}</li>);
     return (
         <div>
             <ul>

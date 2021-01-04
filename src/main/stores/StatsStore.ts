@@ -1,8 +1,8 @@
 import { action, makeObservable, observable } from 'mobx';
 import { uuid } from 'uuidv4';
-import { ICurrentImg, ISpecialList, ISpecialTextImage } from '../../library/common/Typing/interfaces';
-import { SpecialListIndex } from '../../library/common/Typing/enums';
-import { Strength, Agillity, Charisma, Endurance, Perception, Science, Luck } from '../../resources/imgImpors';
+import { ICurrentImg, ISpecialList } from '../../library/common/Typing/interfaces';
+import { SpecialIndex } from '../../library/utils/utils';
+import { SpecialImages, SpecialText } from '../../library/utils/utils'
 
 export class StatsStore {
     public specialList: ISpecialList[] = [
@@ -14,26 +14,14 @@ export class StatsStore {
         { id: uuid(), name: 'Agillity:        7', active: false },
         { id: uuid(), name: 'Luck:            5', active: false },
     ]
-    specialTextImage: ISpecialTextImage[] = [
-        {
-            img: Strength, text: `Strength is a measure of your raw physical poweror magical power
-        (If youre a Horny).It affects how much you can carry and the damage if all melee attacks` },
-        { img: Perception, text: 'Perception' },
-        { img: Endurance, text: 'Endurance dopustim' },
-        { img: Charisma, text: 'Charisma' },
-        { img: Science, text: 'Intelligence' },
-        { img: Agillity, text: 'Agillity' },
-        { img: Luck, text: 'Luck' },
-    ]
 
     public currentImgText: ICurrentImg[] = [
-        { img: Strength, text: `Strength is a measure of your raw physical power or magical power(If youre a Horny).It affects how much you can carry and the damage if all melee attacks` }
+        { img: SpecialImages.STRENGTH, text: SpecialText.STRENGTH_TEXT }
     ]
 
     constructor() {
         makeObservable(this, {
             specialList: observable,
-            specialTextImage: observable,
             currentImgText: observable,
             setActive: action
         })
@@ -42,33 +30,33 @@ export class StatsStore {
     mountImageText = (value: number): void => {
 
         switch (value) {
-            case SpecialListIndex.Strength:
-                this.currentImgText[0].img = this.specialTextImage[0].img
+            case SpecialIndex.Strength:
+                this.currentImgText[0].img = SpecialImages.STRENGTH;
                 break;
-            case SpecialListIndex.Perception:
-                this.currentImgText[0].img = Perception;
+            case SpecialIndex.Perception:
+                this.currentImgText[0].img = SpecialImages.PERCEPTION;
                 break;
-            case SpecialListIndex.Endurance:
-                this.currentImgText[0].img = Endurance;
+            case SpecialIndex.Endurance:
+                this.currentImgText[0].img = SpecialImages.ENDURANCE;
                 break;
-            case SpecialListIndex.Charisma:
-                this.currentImgText[0].img = Charisma;
+            case SpecialIndex.Charisma:
+                this.currentImgText[0].img = SpecialImages.CHARISMA;
                 break;
-            case SpecialListIndex.Science:
-                this.currentImgText[0].img = Science;
+            case SpecialIndex.Science:
+                this.currentImgText[0].img = SpecialImages.SCIENCE;
                 break;
-            case SpecialListIndex.Agillity:
-                this.currentImgText[0].img = Agillity;
+            case SpecialIndex.Agillity:
+                this.currentImgText[0].img = SpecialImages.AGILLITY;
                 break;
-            case SpecialListIndex.Luck:
-                this.currentImgText[0].img = Luck;
+            case SpecialIndex.Luck:
+                this.currentImgText[0].img = SpecialImages.LUCK;
                 break;
             default:
-                this.currentImgText[0].img = Strength;
+                this.currentImgText[0].img = SpecialImages.STRENGTH;
         }
     }
 
-    setActive = (i: any) => {
+    setActive = (i: string) => {
         this.specialList.forEach(el => {
             el.active = false
         })
