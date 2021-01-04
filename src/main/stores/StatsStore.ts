@@ -14,8 +14,10 @@ export class StatsStore {
         { id: uuid(), name: 'Agillity:        7', active: false },
         { id: uuid(), name: 'Luck:            5', active: false },
     ]
-    public specialTextImage: ISpecialTextImage[] = [
-        { img: Strength, text: 'Strength is a measure of your raw physical poweror magical power(If youre a Horny).It affects how much you can carry and the damage if all melee attacks' },
+    specialTextImage: ISpecialTextImage[] = [
+        {
+            img: Strength, text: `Strength is a measure of your raw physical poweror magical power
+        (If youre a Horny).It affects how much you can carry and the damage if all melee attacks` },
         { img: Perception, text: 'Perception' },
         { img: Endurance, text: 'Endurance dopustim' },
         { img: Charisma, text: 'Charisma' },
@@ -24,15 +26,15 @@ export class StatsStore {
         { img: Luck, text: 'Luck' },
     ]
 
-    public currentImg: ICurrentImg[] = [
-        { img: Strength }
+    public currentImgText: ICurrentImg[] = [
+        { img: Strength, text: `Strength is a measure of your raw physical power or magical power(If youre a Horny).It affects how much you can carry and the damage if all melee attacks` }
     ]
 
     constructor() {
         makeObservable(this, {
             specialList: observable,
             specialTextImage: observable,
-            currentImg: observable,
+            currentImgText: observable,
             setActive: action
         })
     }
@@ -41,28 +43,28 @@ export class StatsStore {
 
         switch (value) {
             case SpecialListIndex.Strength:
-                this.currentImg[0].img = Strength;
+                this.currentImgText[0].img = this.specialTextImage[0].img
                 break;
             case SpecialListIndex.Perception:
-                this.currentImg[0].img = Perception;
+                this.currentImgText[0].img = Perception;
                 break;
             case SpecialListIndex.Endurance:
-                this.currentImg[0].img = Endurance;
+                this.currentImgText[0].img = Endurance;
                 break;
             case SpecialListIndex.Charisma:
-                this.currentImg[0].img = Charisma;
+                this.currentImgText[0].img = Charisma;
                 break;
             case SpecialListIndex.Science:
-                this.currentImg[0].img = Science;
+                this.currentImgText[0].img = Science;
                 break;
             case SpecialListIndex.Agillity:
-                this.currentImg[0].img = Agillity;
+                this.currentImgText[0].img = Agillity;
                 break;
             case SpecialListIndex.Luck:
-                this.currentImg[0].img = Luck;
+                this.currentImgText[0].img = Luck;
                 break;
             default:
-                this.currentImg[0].img = Strength;
+                this.currentImgText[0].img = Strength;
         }
     }
 

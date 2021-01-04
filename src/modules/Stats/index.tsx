@@ -10,7 +10,7 @@ export const Stats = observer(() => {
     return (
         <div className={styles.statsWrapper}>
             <List setActive={stats.setActive} specialList={stats.specialList} />
-            <Content currentImg={stats.currentImg} />
+            <Content currentImgText={stats.currentImgText} />
         </div>
     )
 })
