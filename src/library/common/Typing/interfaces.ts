@@ -14,7 +14,7 @@ export interface ISpecialTextImage {
     text: string
 }
 
-export interface ICurrentImg {
-    img: any;
-    text: string
+export interface ICurrentImgTextId {
+    img: string;
+    textId: number;
 }

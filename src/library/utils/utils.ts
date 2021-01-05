@@ -1,19 +1,6 @@
 import { Strength, Agillity, Charisma, Endurance, Perception, Science, Luck } from '../../resources/imgImpors'
 
-/// constants
-
-/// Skills
-const STRENGTH = Strength;
-const AGILLITY = Agillity;
-const CHARISMA = Charisma;
-const ENDURANCE = Endurance;
-const PERCEPTION = Perception;
-const SCIENCE = Science;
-const LUCK = Luck;
-/// Texts
-const STRENGTH_TEXT = `Strength is a measure of your raw physical poweror magical power(If youre a Horny).It affects how much you can carry and the damage if all melee attacks`;
-
-export enum SpecialIndex {
+export enum Special {
     Strength = 0,
     Perception = 1,
     Endurance = 2,
@@ -23,16 +10,26 @@ export enum SpecialIndex {
     Luck = 6
 }
 
-export const SpecialImages = {
-    STRENGTH,
-    AGILLITY,
-    CHARISMA,
-    ENDURANCE,
-    PERCEPTION,
-    SCIENCE,
-    LUCK,
+export const SpecialImages: Record<number, string> = {
+    [Special.Strength]: Strength,
+    [Special.Agillity]: Agillity,
+    [Special.Charisma]: Charisma,
+    [Special.Endurance]: Endurance,
+    [Special.Perception]: Perception,
+    [Special.Science]: Science,
+    [Special.Luck]: Luck,
 }
 
-export const SpecialText = {
-    STRENGTH_TEXT,
-}
+/* export const SpecialText: Record<number, number> = {
+    [Special.Strength]: 1,
+    [Special.Agillity]: 2,
+    [Special.Charisma]: 3,
+    [Special.Endurance]: 4,
+    [Special.Perception]: 5,
+    [Special.Science]: 6,
+    [Special.Luck]: 7,
+} */
+
+export const SpecialText = [
+    0, 1, 2, 3, 4, 5, 6
+]
