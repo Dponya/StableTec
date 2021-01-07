@@ -6,6 +6,7 @@ export interface ITask {
 export interface ISpecialList {
     id: any;
     name: string;
+    lvl: string;
     active: boolean;
 }
 

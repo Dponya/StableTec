@@ -5,13 +5,13 @@ import { SpecialText, SpecialImages } from '../../library/utils/utils'
 
 export class StatsStore {
     public specialList: ISpecialList[] = [
-        { id: uuid(), name: 'Strength:        4', active: true },
-        { id: uuid(), name: 'Perception:      7', active: false },
-        { id: uuid(), name: 'Endurance:       5', active: false },
-        { id: uuid(), name: 'Charisma:        4', active: false },
-        { id: uuid(), name: 'Intelligence:    8', active: false },
-        { id: uuid(), name: 'Agillity:        7', active: false },
-        { id: uuid(), name: 'Luck:            5', active: false },
+        { id: uuid(), name: 'Strength:', lvl: '4', active: true },
+        { id: uuid(), name: 'Perception:', lvl: '7', active: false },
+        { id: uuid(), name: 'Endurance:', lvl: '5', active: false },
+        { id: uuid(), name: 'Charisma:', lvl: '4', active: false },
+        { id: uuid(), name: 'Intelligence:', lvl: '8', active: false },
+        { id: uuid(), name: 'Agillity:', lvl: '7', active: false },
+        { id: uuid(), name: 'Luck:', lvl: '5', active: false },
     ]
 
     public currentImgTexId: ICurrentImgTextId = {

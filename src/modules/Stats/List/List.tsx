@@ -10,12 +10,18 @@ interface IListProps {
 
 export const List = observer(({ setActive, specialList }: IListProps) => {
 
-    const elems = specialList.map(i => <li key={i.id} onClick={() => setActive(i.id)} className={i.active ? styles.active : styles.nonactive}>{i.name}</li>)
+    const SpecialElems = specialList.map(el => {
+        return (
+            <div className={`${styles.tableRow} ${el.active ? styles.active : styles.nonactive} `} onClick={() => setActive(el.id)}>
+                <div className={styles.listText}>{el.name}</div>
+                <div className={styles.listText}>{el.lvl}</div>
+            </div>
+        )
+    })
+
     return (
         <div className={styles.listWrapper}>
-            <ul className={styles.listText}>
-                {elems}
-            </ul>
+            {SpecialElems}
         </div>
     )
 })

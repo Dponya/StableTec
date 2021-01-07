@@ -2,27 +2,30 @@
     display: flex;
     margin: 0 -5px;
     grid-area: l;
+    flex-direction: column;
 }
 
 .listText {
-    display: flex;
-    flex-direction: column;
     color: #1fc063;
     font-family: 'monofonto';
     list-style-type: none;
     font-size: 24px;
+    padding: 5px;
+    /* margin: 1em; */
 }
 
-.listText li {
-    margin-bottom: 1em;
-}
-
-li {
+.tableRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* min-height: 80px; */
+    align-items: center;
     cursor: pointer;
+    margin: 1em;
 }
 
 .active {
-    outline: 2px solid;
+    outline: 2px solid #1fc063;
     background: rgba(25, 255, 129, 0.2);
 }
 

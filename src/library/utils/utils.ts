@@ -20,16 +20,6 @@ export const SpecialImages: Record<number, string> = {
     [Special.Luck]: Luck,
 }
 
-/* export const SpecialText: Record<number, number> = {
-    [Special.Strength]: 1,
-    [Special.Agillity]: 2,
-    [Special.Charisma]: 3,
-    [Special.Endurance]: 4,
-    [Special.Perception]: 5,
-    [Special.Science]: 6,
-    [Special.Luck]: 7,
-} */
-
 export const SpecialText = [
     0, 1, 2, 3, 4, 5, 6
 ]
