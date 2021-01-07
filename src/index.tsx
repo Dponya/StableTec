@@ -5,14 +5,17 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { App } from './App'
 import { StoresProvider, stores } from './main/stores/index'
+import styles from './App.module.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <StoresProvider value={stores} >
-      <BrowserRouter >
-        <App />
-      </BrowserRouter>
-    </StoresProvider>
+    <div className={styles.appStyles}>
+      <StoresProvider value={stores} >
+        <BrowserRouter >
+          <App />
+        </BrowserRouter>
+      </StoresProvider>
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );

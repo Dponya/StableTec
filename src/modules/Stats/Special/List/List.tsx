@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './List.module.scss'
 import { observer } from 'mobx-react-lite';
-import { ISpecialList } from '../../../library/common/Typing/interfaces';
+import { ISpecialList } from '../../../../library/common/Typing/interfaces';
 
 interface IListProps {
     setActive: (i: any) => void;

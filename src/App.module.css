@@ -5,5 +5,11 @@
     "cont"
     "f";
     grid-template-rows: 1fr 13fr 2fr;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;   
+}
+
+.appStyles {
+    background-color: #000000;
+    padding: 0;
+    margin: 0;
 }

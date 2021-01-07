@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Content.module.scss';
 import { observer } from 'mobx-react-lite';
-import { ICurrentImgTextId } from '../../../library/common/Typing/interfaces';
+import { ICurrentImgTextId } from '../../../../library/common/Typing/interfaces';
 
 interface IContentProps {
   currentImgTextId: ICurrentImgTextId;

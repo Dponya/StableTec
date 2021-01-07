@@ -11,14 +11,12 @@
     list-style-type: none;
     font-size: 24px;
     padding: 5px;
-    /* margin: 1em; */
 }
 
 .tableRow {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* min-height: 80px; */
     align-items: center;
     cursor: pointer;
     margin: 1em;

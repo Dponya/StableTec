@@ -1,11 +1,20 @@
 .statsWrapper {
     display: grid;
     grid-template-areas:
-    "l c";
-    grid-template-rows: 60px 1fr;
-    grid-template-columns: 10fr 10fr;
-    grid-gap: 0px;
-    grid-area: cont;
-    padding: 55px;
-    margin: 5px;
+    "n"
+    "cont";
+    grid-template-rows: 1fr 16fr 1fr;
+}
+
+.navbar {
+    grid-area: n;
+    display: flex;
+    justify-content: center;
+}
+
+.navbarText {
+    font-family: 'monofonto';
+    text-decoration: none;
+    font-size: 30px;
+    color: #1fc063;
 }
