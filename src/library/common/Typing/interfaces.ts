@@ -19,3 +19,7 @@ export interface ICurrentImgTextId {
     img: string;
     textId: number;
 }
+
+export interface ICurrentItem {
+    img: string;
+}

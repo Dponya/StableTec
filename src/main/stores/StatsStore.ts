@@ -30,8 +30,6 @@ export class StatsStore {
     mountImageText = (value: number): void => {
         this.currentImgTexId.img = SpecialImages[value];
         this.currentImgTexId.textId = SpecialText[value];
-        console.log(value);
-        console.log(this.currentImgTexId.textId)
     }
 
     setActive = (id: string) => {

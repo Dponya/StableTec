@@ -1,14 +1,17 @@
 import React from 'react';
 import styles from './Weapons.module.scss';
-import { InventoryImages } from '../../../library/utils/utils'
+import { Inventory } from '../../../library/utils/utils'
+import { useStore } from '../../../main/stores/storeHooks';
 
 export const Weapons: React.FC = () => {
+    const weapon = useStore('weaponsStore');
+
     return (
         <div>
             <div className={styles.weaponsWrapper}>
-                <div className={`${styles.card} ${styles.inventoryText}`}>
+                <div key={Inventory.PlazmaPistol} className={`${styles.card} ${styles.inventoryText}`} onClick={() => weapon.showItem(Inventory.PlazmaPistol)}>
                     <p>
-                        PlazmaPistol
+                        Plazma-Pistol
                 </p>
                     <h2>
 
@@ -16,7 +19,7 @@ export const Weapons: React.FC = () => {
                 </h2>
                 </div>
                 <div className={`${styles.content} ${styles.inventoryText}`}>
-                    <img src={InventoryImages[0]} alt={'no img'} className={styles.img} />
+                    <img src={weapon.currentItem.img} alt={'no img'} className={styles.img} />
                 </div>
                 <div className={`${styles.card} ${styles.inventoryText}`}>
                     <p>
@@ -41,7 +44,7 @@ export const Weapons: React.FC = () => {
                         Horn!
                 </p>
                     <h2>
-                        Wait, WHAT? Your horn is... Weapon? Oh, of course: The horn can do magic and ... can pierce the enemy
+                        Wait, WHAT? Your horn is... Weapon? Oh, of course: The horn can do magic and ... can PIERCE the enemy!
                 </h2>
                 </div>
             </div>
