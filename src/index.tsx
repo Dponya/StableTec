@@ -9,17 +9,16 @@ import styles from './App.module.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <div className={styles.appStyles}>
-      <StoresProvider value={stores} >
-        <BrowserRouter >
+    <StoresProvider value={stores} >
+      <BrowserRouter >
+        <div className={styles.appStyles}>
           <App />
-        </BrowserRouter>
-      </StoresProvider>
-    </div>
+        </div>
+      </BrowserRouter>
+    </StoresProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
 
 
 
