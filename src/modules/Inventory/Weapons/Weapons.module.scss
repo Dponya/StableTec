@@ -10,10 +10,9 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 50px;
-}
-
-.content {
-    grid-area: content;
+    .img {
+        width: 250px;
+    }
 }
 
 .card {
@@ -37,9 +36,5 @@
         font-family: 'monofonto';
         font-weight: normal;
     }
-}
-
-.img {
-    width: 250px;
 }
 

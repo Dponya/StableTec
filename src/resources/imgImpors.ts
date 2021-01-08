@@ -7,7 +7,9 @@ import Science from './images/Skills_Science.png';
 import Luck from './images/Skills_Luck.png';
 
 import PlazmaPistol from './images/PlazmaPistol.jpg';
-
+import Axe from './images/Axe.png';
+import TNT from './images/TNT.png';
+import Horn from './images/Horn.png';
 // Special
 
 export {
@@ -17,5 +19,8 @@ export {
 // Inventory
 
 export {
-    PlazmaPistol
+    PlazmaPistol,
+    Axe,
+    TNT,
+    Horn
 }

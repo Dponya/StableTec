@@ -1,4 +1,4 @@
-import { Strength, Agillity, Charisma, Endurance, Perception, Science, Luck, PlazmaPistol } from '../../resources/imgImpors'
+import { Strength, Agillity, Charisma, Endurance, Perception, Science, Luck, PlazmaPistol, Axe, Horn, TNT } from '../../resources/imgImpors'
 
 export enum Special {
     Strength = 0,
@@ -12,6 +12,9 @@ export enum Special {
 
 export enum Inventory {
     PlazmaPistol = 0,
+    TNT = 1,
+    Axe = 2,
+    Horn = 3,
 }
 
 export const SpecialImages: Record<number, string> = {
@@ -29,5 +32,8 @@ export const SpecialText = [
 ]
 
 export const InventoryImages: Record<number, string> = {
-    [Inventory.PlazmaPistol]: PlazmaPistol
+    [Inventory.PlazmaPistol]: PlazmaPistol,
+    [Inventory.TNT]: TNT,
+    [Inventory.Axe]: Axe,
+    [Inventory.Horn]: Horn
 }

@@ -2,14 +2,15 @@ import React from 'react';
 import styles from './Weapons.module.scss';
 import { Inventory } from '../../../library/utils/utils'
 import { useStore } from '../../../main/stores/storeHooks';
+import { observer } from 'mobx-react-lite';
 
-export const Weapons: React.FC = () => {
+export const Weapons: React.FC = observer(() => {
     const weapon = useStore('weaponsStore');
 
     return (
         <div>
             <div className={styles.weaponsWrapper}>
-                <div key={Inventory.PlazmaPistol} className={`${styles.card} ${styles.inventoryText}`} onClick={() => weapon.showItem(Inventory.PlazmaPistol)}>
+                <div className={`${styles.card} ${styles.inventoryText}`} onClick={() => weapon.showItem(Inventory.PlazmaPistol)}>
                     <p>
                         Plazma-Pistol
                 </p>
@@ -21,7 +22,7 @@ export const Weapons: React.FC = () => {
                 <div className={`${styles.content} ${styles.inventoryText}`}>
                     <img src={weapon.currentItem.img} alt={'no img'} className={styles.img} />
                 </div>
-                <div className={`${styles.card} ${styles.inventoryText}`}>
+                <div className={`${styles.card} ${styles.inventoryText}`} onClick={() => weapon.showItem(Inventory.Axe)}>
                     <p>
                         Axe
                 </p>
@@ -31,7 +32,7 @@ export const Weapons: React.FC = () => {
                 </div>
             </div>
             <div className={styles.weaponsWrapper}>
-                <div className={`${styles.card} ${styles.inventoryText}`}>
+                <div className={`${styles.card} ${styles.inventoryText}`} onClick={() => weapon.showItem(Inventory.TNT)}>
                     <p>
                         TNT
                 </p>
@@ -39,7 +40,7 @@ export const Weapons: React.FC = () => {
                         An explosive bunch of TNT! She can strongly boom!
                 </h2>
                 </div>
-                <div className={`${styles.card} ${styles.inventoryText}`}>
+                <div className={`${styles.card} ${styles.inventoryText}`} onClick={() => weapon.showItem(Inventory.Horn)}>
                     <p>
                         Horn!
                 </p>
@@ -50,4 +51,4 @@ export const Weapons: React.FC = () => {
             </div>
         </div>
     )
-}
+})

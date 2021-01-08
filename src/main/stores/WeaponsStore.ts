@@ -15,8 +15,7 @@ export class WeaponsStore {
         })
     }
 
-    showItem = (key: number) => {
+    showItem = (key: number): void => {
         this.currentItem.img = InventoryImages[key];
-        console.log(key);
     }
 }

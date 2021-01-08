@@ -32,7 +32,7 @@ export class StatsStore {
         this.currentImgTexId.textId = SpecialText[value];
     }
 
-    setActive = (id: string) => {
+    setActive = (id: string): void => {
         this.specialList.forEach(el => {
             el.active = false
         })
