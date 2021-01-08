@@ -8,14 +8,28 @@ export class WeaponsStore {
         img: InventoryImages[0]
     }
 
+    public currentActive: Array<any> = [
+        { active: false },
+        { active: false },
+        { active: false },
+        { active: false },
+    ]
+
     constructor() {
         makeObservable(this, {
             currentItem: observable,
+            currentActive: observable,
             showItem: action
         })
     }
 
     showItem = (key: number): void => {
         this.currentItem.img = InventoryImages[key];
+        this.currentActive.forEach(el => {
+            el.active = false
+        });
+        this.currentActive[key].active = true;
+        console.log(this.currentActive);
+        console.log(key)
     }
 }
