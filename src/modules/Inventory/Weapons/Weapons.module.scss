@@ -1,0 +1,28 @@
+.inventoryText {
+    color: #1fc063;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.weaponsWrapper {
+    display: grid;
+    grid-template-areas:
+    "cardone content cardtwo";
+    /* grid-template-rows: 1fr 16fr 1fr; */
+    grid-template-columns: repeat(1, 3fr);
+    color: #1fc063;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.cardOne {
+    grid-area: cardone;
+}
+
+.content {
+    grid-area: content;
+}
+
+.cardTwo {
+    grid-area: cardtwo;
+}
