@@ -15,6 +15,7 @@ export const InvRoute = () => {
     return (
         <div>
             <Route exact path='/inv' render={() => <Weapons />} />
+            <Route exact path='/inv/weapons' render={() => <Weapons />} />
         </div>
     )
 }

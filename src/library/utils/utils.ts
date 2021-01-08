@@ -1,4 +1,4 @@
-import { Strength, Agillity, Charisma, Endurance, Perception, Science, Luck } from '../../resources/imgImpors'
+import { Strength, Agillity, Charisma, Endurance, Perception, Science, Luck, PlazmaPistol } from '../../resources/imgImpors'
 
 export enum Special {
     Strength = 0,
@@ -8,6 +8,10 @@ export enum Special {
     Science = 4,
     Agillity = 5,
     Luck = 6
+}
+
+export enum Inventory {
+    PlazmaPistol = 0,
 }
 
 export const SpecialImages: Record<number, string> = {
@@ -23,3 +27,7 @@ export const SpecialImages: Record<number, string> = {
 export const SpecialText = [
     0, 1, 2, 3, 4, 5, 6
 ]
+
+export const InventoryImages: Record<number, string> = {
+    [Inventory.PlazmaPistol]: PlazmaPistol
+}

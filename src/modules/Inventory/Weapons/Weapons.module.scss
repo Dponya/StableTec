@@ -5,24 +5,41 @@
 }
 
 .weaponsWrapper {
-    display: grid;
-    grid-template-areas:
-    "cardone content cardtwo";
-    /* grid-template-rows: 1fr 16fr 1fr; */
-    grid-template-columns: repeat(1, 3fr);
-    color: #1fc063;
-    text-decoration: none;
-    font-size: 24px;
-}
-
-.cardOne {
-    grid-area: cardone;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px;
 }
 
 .content {
     grid-area: content;
 }
 
-.cardTwo {
-    grid-area: cardtwo;
+.card {
+    background-color: #000000;
+    display: block;
+    width: 300px;
+    min-height: 90px;
+    cursor: pointer;
+    padding: 15px;
+    margin: 5px;
+    border: 2px solid #1fc063;
+    p {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 10px;
+        font-family: 'monofonto';
+    }
+    h2 {
+        font-size: 16px;
+        font-family: 'monofonto';
+        font-weight: normal;
+    }
 }
+
+.img {
+    width: 250px;
+}
+
