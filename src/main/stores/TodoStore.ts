@@ -1,7 +1,6 @@
 import { action, makeObservable, observable } from 'mobx';
 import { uuid } from 'uuidv4';
 import { ITask } from '../../library/common/Typing/interfaces';
-import { SubmitHandler } from 'react-hook-form';
 
 export class TodoStore {
     public tasks: ITask[] = [

@@ -1,23 +1,19 @@
 import React from 'react';
+import { TodoList } from './TodoList/TodoList';
 import styles from './Data.module.scss'
-import { observer } from "mobx-react-lite";
-import { FormButton } from './TodoList/FormButton';
-import { ListItems } from './TodoList/ListItems';
-import { useStore } from '../../main/stores/storeHooks';
+import { QuestNavbar } from './QuestNavbar/QuestNavbar';
+import { QuestRoute } from '../../main/routes/nBarRoutes';
 
 
-export const Data: React.FC = observer(() => {
-    const todo = useStore('todoStore');
-
-    /* const handleDeleteTodo = (e: React.FormEvent, id: number): void => {
-        e.preventDefault();
-        todo.deleteTodo(id);
-    } */
-
+export const Data: React.FC = () => {
     return (
-        <div className={styles.dataWrapper}>
-            <FormButton addTodo={todo.addTodo} />
-            <ListItems tasks={todo.tasks} deleteTodo={todo.deleteTodo} />
+        <div>
+            <div className={styles.navbar}>
+                <QuestNavbar />
+            </div>
+            <div className={styles.content}>
+                <QuestRoute />
+            </div>
         </div>
     )
-});
+}

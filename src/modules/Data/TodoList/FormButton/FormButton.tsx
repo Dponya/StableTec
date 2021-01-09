@@ -11,7 +11,7 @@ type Inputs = {
 
 export const FormButton: React.FC<IFormButtonProps> = ({ addTodo }) => {
 
-    const { register, handleSubmit, watch, errors } = useForm<Inputs>();
+    const { register, handleSubmit } = useForm<Inputs>();
     const onSubmit = (data: SubmitHandler<Record<string, any>>) => addTodo(data)
 
     return (
@@ -19,7 +19,7 @@ export const FormButton: React.FC<IFormButtonProps> = ({ addTodo }) => {
 
             <input name="example" defaultValue="test" ref={register} />
 
-            <input type="submit" />
+            <input type="submit" value="send your task" />
         </form>
     );
 }

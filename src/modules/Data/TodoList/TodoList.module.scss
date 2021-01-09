@@ -1,0 +1,17 @@
+.dataWrapper {
+    grid-area: cont;
+    padding: 5px;
+    grid-template-areas:
+    "todo";
+    grid-template-rows: 1fr 10fr 4fr;
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+}
+
+.dataText {
+    color: #1fc063;
+    text-decoration: none;
+    font-family: 'monofonto';
+    font-size: 24px;
+    list-style: none;
+}
