@@ -1,28 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { SubmitHandler, useForm } from "react-hook-form";
 
 interface IFormButtonProps {
-    addTodo: (e: React.FormEvent, task: string) => void;
+    addTodo: (task: React.FormEventHandler) => void;
 }
+
+type Inputs = {
+    example: string,
+};
 
 export const FormButton: React.FC<IFormButtonProps> = ({ addTodo }) => {
 
-    const [newTask, setTask] = useState<any>('');
+    const { register, handleSubmit, watch, errors } = useForm<Inputs>();
+    const onSubmit = (data: SubmitHandler<Record<string, any>>) => addTodo(data)
 
     return (
-        <div>
-            <form onSubmit={(e: React.FormEvent) => addTodo(e, newTask)}>
-                <label htmlFor="todo">Todo text</label>
-                <br />
-                <input
-                    id="todo"
-                    className="todo-input"
-                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => setTask(event.target.value)}
-                    value={newTask}
-                />
-                <button type="submit" className="add-btn">
-                    Add
-                </button>
-            </form>
-        </div>
-    )
+        <form onSubmit={handleSubmit(onSubmit)}>
+
+            <input name="example" defaultValue="test" ref={register} />
+
+            <input type="submit" />
+        </form>
+    );
 }

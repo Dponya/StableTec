@@ -1,6 +1,8 @@
+import { SubmitHandler } from 'react-hook-form';
+
 export interface ITask {
     id: any;
-    task: string
+    filteredTask: string
 }
 
 export interface ISpecialList {

@@ -8,7 +8,7 @@ export const Weather = observer(() => {
     useEffect(() => {
         weather.fetchManehatten();
         weather.fetchFillydelphia();
-    }, [])
+    }, [weather])
     return (
         <div className={styles.weatherWrapper}>
             <p className={styles.weatherText}>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { StatsRoute } from '../../main/routes/nBarRoutes';
-import { Special } from './Special/Special'
 import styles from './Stats.module.scss'
 import { StatsNavbar } from './StatsNavbar/StatsNavbar';
 
