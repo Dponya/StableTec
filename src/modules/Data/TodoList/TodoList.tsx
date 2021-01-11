@@ -11,8 +11,8 @@ export const TodoList: React.FC = observer(() => {
 
     return (
         <div className={styles.dataWrapper}>
-            <FormButton addTodo={todo.addTodo} />
-            <ListItems tasks={todo.tasks} deleteTodo={todo.deleteTodo} />
+            <FormButton addTodo={todo.addTodo} tasks={todo.tasks} />
+            {/* <ListItems tasks={todo.tasks} deleteTodo={todo.deleteTodo} /> */}
         </div>
     )
 });
