@@ -15,15 +15,6 @@
     font-size: 24px;
     list-style: none;
 }
-
-.inputForm {
-    border: none;
-    background-color: #000000;
-    font-family: 'monofonto';
-    color: #1fc063;
-    min-height: 30px;
-}
-
 input:focus{
     outline: none;
 }
@@ -50,12 +41,12 @@ input:focus{
   padding:15px;
 }
 .output {
-  background-color: #000000;
-  color:rgb(50,255,0);
+  background-color: transparent;
   font-family:"VT323",monospace;
-  border: 2px solid #1fc063;
+  border: none;
   height:650px;
   width: 1200px;
+  resize: none;
   outline: none;
   box-shadow: none;
   padding: 0;
@@ -64,6 +55,8 @@ input:focus{
     -webkit-font-smoothing: none;
     line-height: 1.2;
     pointer-events: none;
+    font-size: 14px;
+    color: #1fc063;
 }
 
 .commandInput {
@@ -241,6 +234,7 @@ dialog{
     justify-content: center;
     bottom: 1000px;
     left: 0%;
+    pointer-events: none;
 }
 
 .terminalcontainer {
@@ -248,4 +242,5 @@ dialog{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 2px solid #1fc063;
 }
