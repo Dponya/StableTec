@@ -40,10 +40,11 @@ input:focus{
   box-shadow: none;
   padding: 0;
   letter-spacing: .1em;
-    font-size: 24px;
     -webkit-font-smoothing: none;
     line-height: 1.2;
-  
+      font-family:"VT323",monospace;
+      color: #1fc063;
+      text-shadow: 0 0 10px #C8C8C8;
 }
 .console{
   padding:15px;
@@ -68,30 +69,13 @@ input:focus{
 .commandInput {
   position: absolute;
   margin-top: -100px;
+  margin-right: 300px;
+  width: 100%;
   .line {
+    font-size: 14px;
     font-family:"VT323",monospace;
     color: #1fc063;
   }
-}
-
-.cursor {
-	position: relative;
-}
-.cursor	i {
-	position: absolute;
-	width: 1px;
-	height: 80%;
-	background-color: transparent;
-	left: 5px;
-	top: 10%;
-	animation-name: blink;
-	animation-duration: 800ms;
-	animation-iteration-count: infinite;
-	opacity: 1;
-}
-
-.cursor input:focus + i {
-	display: none;
 }
 
 @keyframes blink {
@@ -237,19 +221,11 @@ input:focus{
   background-color: transparent;
   color:rgb(255,55,0);
   font-family:"VT323",monospace;
-  border: none;
-  width: 90%;
-  outline: none;
-  box-shadow: none;
-  padding: 0;
   letter-spacing: .1em;
     font-size: 32px;
     -webkit-font-smoothing: none;
     line-height: 1.2;
-  /* animation-duration: initial; */
   animation: blink 0.9s infinite;
-	opacity: 0;
-	margin: 0px auto;
 }
 dialog{
     background-color: #000000;
@@ -267,3 +243,9 @@ dialog{
     left: 0%;
 }
 
+.terminalcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

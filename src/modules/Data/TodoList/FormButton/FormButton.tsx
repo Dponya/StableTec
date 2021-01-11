@@ -21,12 +21,11 @@ export const FormButton: React.FC<IFormButtonProps> = ({ tasks, addTodo }) => {
 
     return (
         <div>
-            <dialog id="dialog" className={styles.crt}>
-                <div id="content"></div>
-            </dialog>
-            <dialog open><p className={styles.error}>ERROR...</p></dialog>
-            <textarea className={`${styles.output} `} id="demo">{taskList}</textarea>
-            <div className={styles.console} id="console">
+            <div className={styles.terminalcontainer}>
+                <div><p className={styles.error}>ERROR...</p></div>
+                <textarea className={`${styles.output} `}>{taskList}</textarea>
+            </div>
+            <div className={styles.console}>
                 <div className={`${styles.commandInput} `}><br />
                     <div ><span className={styles.line}>root@SAM </span></div>
                     <div><span className={styles.line}>$</span>&nbsp;
@@ -35,7 +34,6 @@ export const FormButton: React.FC<IFormButtonProps> = ({ tasks, addTodo }) => {
                 </div>
 
             </div>
-
         </div>
     )
 }
