@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { TodoList } from '../../modules/Data/TodoList/TodoList';
 import { Weapons } from '../../modules/Inventory/Weapons/Weapons';
 import { Special } from '../../modules/Stats/Special/Special';
+import { Console } from '../../modules/Data/Console/Console';
 
 export const StatsRoute = () => {
     return (
@@ -24,8 +24,8 @@ export const InvRoute = () => {
 export const QuestRoute = () => {
     return (
         <div>
-            <Route exact path='/data' render={() => <TodoList />} />
-            <Route exact path='/data/quest' render={() => <TodoList />} />
+            <Route exact path='/data' render={() => <Console />} />
+            <Route exact path='/data/quest' render={() => <Console />} />
         </div>
     )
 }

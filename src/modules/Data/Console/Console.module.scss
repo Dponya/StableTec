@@ -6,6 +6,9 @@
     grid-template-rows: 1fr 10fr 4fr;
     grid-template-columns: 1fr;
     grid-gap: 0px;
+    border: 2px solid #1fc063;
+    max-height: 600px;
+    width: 1200px;
 }
 
 .dataText {
@@ -39,18 +42,20 @@ input:focus{
 }
 .console{
   padding:15px;
+  margin-bottom: 300px;
+  position: absolute;
 }
 .output {
   background-color: transparent;
   font-family:"VT323",monospace;
   border: none;
-  height:650px;
+  height:450px;
   width: 1200px;
   resize: none;
   outline: none;
   box-shadow: none;
   padding: 0;
-  letter-spacing: .1em;
+  /* letter-spacing: .1em; */
     font-size: 24px;
     -webkit-font-smoothing: none;
     line-height: 1.2;
@@ -59,9 +64,24 @@ input:focus{
     color: #1fc063;
 }
 
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  min-height: 200px;
+  margin: 0 auto;
+  /* letter-spacing: .5em; */
+  animation: 
+    typing 1.5s steps(30, end),
+}
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
 .commandInput {
-  position: absolute;
-  margin-top: -100px;
+  margin-top: -150px;
   margin-right: 300px;
   width: 100%;
   .line {
@@ -223,7 +243,6 @@ input:focus{
 dialog{
     background-color: #000000;
     color:rgb(50,255,0);
-    border: 2px solid #1fc063;
     font-family: "VT323",monospace;
     letter-spacing: .1em;
     font-size: 24px;
@@ -242,5 +261,5 @@ dialog{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid #1fc063;
+  max-height: 500px;
 }
