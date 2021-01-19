@@ -1,4 +1,5 @@
 import { Strength, Agillity, Charisma, Endurance, Perception, Science, Luck, PlazmaPistol, Axe, Horn, TNT } from '../../resources/imgImpors'
+import { TODO_FIRST_TEXT, TODO_ADD_TODO } from './constants';
 
 export enum Special {
     Strength = 0,
@@ -36,4 +37,14 @@ export const InventoryImages: Record<number, string> = {
     [Inventory.TNT]: TNT,
     [Inventory.Axe]: Axe,
     [Inventory.Horn]: Horn
+}
+
+export enum Commands {
+    Todo = `todo`,
+    AddTodo = 'addtodo'
+}
+
+export const CommandsText: Record<string, string> = {
+    [Commands.Todo]: TODO_FIRST_TEXT,
+    [Commands.AddTodo]: TODO_ADD_TODO,
 }
