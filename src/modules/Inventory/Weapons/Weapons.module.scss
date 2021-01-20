@@ -39,11 +39,15 @@
 }
 
 .active {
-    outline: 4px solid #1fc063;
+    /* outline: 4px solid #1fc063; */
+    outline: 2px solid #1fc063;
+    background: rgba(25, 255, 129, 0.2);
 }
 
 .nonactive {
-    border: 2px solid #1fc063;
+    /* border: 2px solid #1fc063; */
+    background-color: #000000;
+    border: 1px solid #1fc063
 }
 
 .content {

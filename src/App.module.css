@@ -4,7 +4,7 @@
     "h"
     "cont"
     "f";
-    grid-template-rows: 1fr 14fr 2fr;
+    grid-template-rows: 1fr 12fr 2fr;
     grid-template-columns: 1fr;   
 }
 
