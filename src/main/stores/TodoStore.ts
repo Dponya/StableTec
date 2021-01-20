@@ -6,7 +6,7 @@ import { TODO_FIRST_TEXT } from '../../library/utils/constants';
 
 export class TodoStore {
     public tasks: ITask[] = [
-        { id: uuid(), filteredTask: 'type your tasks boy' },
+        { id: uuid(), filteredTask: 'fixTrouble' },
     ];
     public showTask: boolean = false;
     public commandState: string = '';
@@ -33,20 +33,27 @@ export class TodoStore {
     }
 
     consoleFilter = (command: any) => {
-        const commandText = command.command;
-        console.log(commandText.split('')[1]);
+        const notFilteredText = command.command;
+        const splitedCommandText = notFilteredText.split(' ')[0]
+        const splitedValueText = notFilteredText.split(' ')[1]
+        let tasksList = this.tasks.map((task) => {
+            return task.filteredTask;
+        })
 
-        switch (commandText) {
+        switch (splitedCommandText) {
             case Commands.Todo:
+
                 this.commandState = '';
                 this.commandState = CommandsText.todo;
                 break;
-            case Commands.AddTodo:
-                this.tasks.push({ id: uuid(), filteredTask: 'example' })
+            case Commands.TodoList:
 
-                let tasksList = this.tasks.map((task) => {
-                    return task.filteredTask;
-                })
+                this.commandState = '';
+                this.commandState = `${CommandsText.todolist}: ${tasksList}`
+                break;
+            case Commands.AddTodo:
+                this.tasks.push({ id: uuid(), filteredTask: splitedValueText })
+
                 this.commandState = '';
                 this.commandState = `${CommandsText.addtodo}: ${tasksList}`;
                 break;

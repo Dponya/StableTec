@@ -15,14 +15,13 @@ export const Console: React.FC = () => {
     return (
         <div className={styles.dataWrapper}>
             <div className={styles.errorContent}>
-                <p className={styles.error}>ERROR...</p>
+                <p className={styles.error}>ERROR...<br />
+                StableTec servers not responding (@*##@!#)!!@#*@!(#!*@(#!@*(#* <br /> trying to reconnecting...</p>
             </div>
             <div className={styles.typeContent}>
                 <p className={styles.typing}>!(@*##@!#)!!@#*@!(#!*@(#!@*(#*!@(#*!(@)# <br />
-                 Welcome! Its StableTec Corp. Terminal. Thanks for using StableTec! <br /> All rights reserved (c) @StableTec</p>
-            </div>
-            <div>
-                <p className={styles.typeContent}>{todo.commandState}</p>
+                 Welcome! Its StableTec Corp. Terminal. Thanks for using StableTec! <br /> All rights reserved (c) @StableTec <br />
+                Available commands: <br /> todo <br />/////////<br /> {todo.commandState}</p>
             </div>
             <div>
                 <form onSubmit={handleSubmit(onSubmit)} className={styles.terminalInput}>
