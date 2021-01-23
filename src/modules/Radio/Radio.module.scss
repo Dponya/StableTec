@@ -8,7 +8,10 @@
 
 .radioText {
     color: #1fc063;
-    text-decoration: none;
+    font-family: 'monofonto';
+    font-size: 24px;
+    padding: 10px;
+    list-style: none;
 }
 
 .navbarText {
@@ -30,4 +33,10 @@
     grid-area: cont;
     margin: 50px;
     padding: 5px;
+}
+
+.list {
+    max-width: 400px;
+    max-height: 600px;
+    border: 2px solid #1fc063;
 }
