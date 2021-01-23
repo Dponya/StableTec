@@ -1,9 +1,33 @@
 .radioWrapper {
-    grid-area: cont;
-    padding: 5px;
+    display: grid;
+    grid-template-areas:
+    "n"
+    "cont";
+    grid-template-rows: 1fr 16fr 1fr;
 }
 
 .radioText {
     color: #1fc063;
     text-decoration: none;
+}
+
+.navbarText {
+    font-family: 'monofonto';
+    text-decoration: none;
+    font-size: 30px;
+    color: #1fc063;
+}
+
+.navbar {
+    grid-area: n;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    grid-area: cont;
+    margin: 50px;
+    padding: 5px;
 }

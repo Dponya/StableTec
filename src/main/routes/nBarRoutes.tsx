@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import { Weapons } from '../../modules/Inventory/Weapons/Weapons';
 import { Special } from '../../modules/Stats/Special/Special';
 import { Console } from '../../modules/Data/Console/Console';
+import { Radio } from '../../modules/index';
 
 export const StatsRoute = () => {
     return (
@@ -26,6 +27,15 @@ export const QuestRoute = () => {
         <div>
             <Route exact path='/data' render={() => <Console />} />
             <Route exact path='/data/quest' render={() => <Console />} />
+        </div>
+    )
+}
+
+export const RadioRoute = () => {
+    return (
+        <div>
+            <Route exact path='/radio' render={() => <Radio />} />
+            <Route exact path='/radio/radio' render={() => <Radio />} />
         </div>
     )
 }

@@ -10,6 +10,8 @@ import PlazmaPistol from './images/PlazmaPistol.jpg';
 import Axe from './images/Axe.png';
 import TNT from './images/TNT.png';
 import Horn from './images/Horn.png';
+
+import FactoryWorldMap from './images/FactoryWorldMap.svg'
 // Special
 
 export {
@@ -23,4 +25,10 @@ export {
     Axe,
     TNT,
     Horn
+}
+
+// map
+
+export {
+    FactoryWorldMap
 }

@@ -1,12 +1,17 @@
 import React from 'react';
 import styles from './Radio.module.scss'
+import { AlreadyOneYear } from '../../resources/mp3imports';
+import { RadioNavbar } from './RadioNavbar/RadioNavbar'
 
 export const Radio = () => {
     return (
-        <div className={styles.radioWrapper}>
-            <p className={styles.radioText}>
-                Radio soon
-            </p>
+        <div>
+            <div className={styles.navbar}>
+                <RadioNavbar />
+            </div>
+            <div className={styles.content}>
+
+            </div>
         </div>
     )
 }
