@@ -19,10 +19,6 @@ export class TodoStore {
         });
     }
 
-    get getAllTasks() {
-        return this.tasks;
-    }
-
     addTodo = (task: any): void => {
         let filteredTask = task.example;
         this.tasks.push({ id: uuid(), filteredTask })
@@ -58,7 +54,8 @@ export class TodoStore {
                 this.commandState = `${CommandsText.addtodo}: ${tasksList}`;
                 break;
             default:
-                console.log('Type "commands" for show list of commands');
+                this.commandState = '';
+                this.commandState = `Error. Invalid command. ${CommandsText.todo}.`
                 break;
         }
     }

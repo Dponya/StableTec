@@ -2,16 +2,17 @@ import React from 'react';
 import styles from './Radio.module.scss'
 import { AlreadyOneYear } from '../../resources/mp3imports';
 import { RadioNavbar } from './RadioNavbar/RadioNavbar'
-import { RadioRoute } from '../../main/routes/nBarRoutes';
+import { AudioList } from './AudioList/AudioList';
+import { RadioWave } from './RadioWave/RadioWave';
 
 export const Radio = () => {
     return (
-        <div>
-            <div className={styles.navbar}>
-                <RadioNavbar />
-            </div>
+        <div className={styles.radioWrapper}>
             <div className={styles.content}>
-                <RadioRoute />
+                <AudioList />
+            </div>
+            <div className={styles.graph}>
+                <RadioWave />
             </div>
         </div>
     )

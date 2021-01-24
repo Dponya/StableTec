@@ -1,17 +1,17 @@
 .radioWrapper {
-    display: grid;
-    grid-template-areas:
-    "n"
-    "cont";
-    grid-template-rows: 1fr 16fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
 }
 
 .radioText {
-    color: #1fc063;
+    color:#1fc063;
     font-family: 'monofonto';
     font-size: 24px;
-    padding: 10px;
-    list-style: none;
+    padding-bottom: 60px;
+    letter-spacing: 1px;
 }
 
 .navbarText {
@@ -32,11 +32,20 @@
     justify-content: center;
     grid-area: cont;
     margin: 50px;
-    padding: 5px;
+    padding-right: 500px;
+}
+
+.graph {
+    grid-area: graph;
 }
 
 .list {
-    max-width: 400px;
-    max-height: 600px;
-    border: 2px solid #1fc063;
+    margin-right: 50px;
+}
+
+.radioWaveGraph {
+    min-width: 400px;
+    min-height: 400px;
+    border-bottom: 8px dashed #1fc063;
+    border-right: 8px dashed #1fc063;
 }
