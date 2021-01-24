@@ -3,7 +3,6 @@ import { Route } from 'react-router-dom';
 import { Weapons } from '../../modules/Inventory/Weapons/Weapons';
 import { Special } from '../../modules/Stats/Special/Special';
 import { Console } from '../../modules/Data/Console/Console';
-import { AudioList } from '../../modules/Radio/AudioList/AudioList';
 
 export const StatsRoute = () => {
     return (

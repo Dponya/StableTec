@@ -1,5 +1,6 @@
 import { Strength, Agillity, Charisma, Endurance, Perception, Science, Luck, PlazmaPistol, Axe, Horn, TNT } from '../../resources/imgImpors'
 import { TODO_FIRST_TEXT, TODO_ADD_TODO, TODO_LIST } from './constants';
+import { AlreadyOneYear, DareMaster } from '../../resources/mp3imports'
 
 export enum Special {
     Strength = 0,
@@ -16,6 +17,11 @@ export enum Inventory {
     TNT = 1,
     Axe = 2,
     Horn = 3,
+}
+
+export enum Audios {
+    AlreadyOneYear = 0,
+    DareMaster = 1
 }
 
 export const SpecialImages: Record<number, string> = {
@@ -49,4 +55,9 @@ export const CommandsText: Record<string, string> = {
     [Commands.Todo]: TODO_FIRST_TEXT,
     [Commands.AddTodo]: TODO_ADD_TODO,
     [Commands.TodoList]: TODO_LIST,
+}
+
+export const AudioTracks: Record<number, string> = {
+    [Audios.AlreadyOneYear]: AlreadyOneYear,
+    [Audios.DareMaster]: DareMaster
 }

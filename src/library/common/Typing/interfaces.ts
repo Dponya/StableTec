@@ -25,3 +25,8 @@ export interface ICurrentImgTextId {
 export interface ICurrentItem {
     img: string;
 }
+
+export interface IAudio {
+    pause: () => void,
+    play: () => void
+}

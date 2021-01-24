@@ -1,7 +1,5 @@
 import React from 'react';
-import styles from './Radio.module.scss'
-import { AlreadyOneYear } from '../../resources/mp3imports';
-import { RadioNavbar } from './RadioNavbar/RadioNavbar'
+import styles from './Radio.module.scss';
 import { AudioList } from './AudioList/AudioList';
 import { RadioWave } from './RadioWave/RadioWave';
 
