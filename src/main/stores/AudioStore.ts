@@ -3,7 +3,7 @@ import { IAudio } from '../../library/common/Typing/interfaces';
 import { AudioTracks } from '../../library/utils/utils';
 
 export class AudioStore {
-    public auidoEx: null | IAudio = null;
+    public auidoEx: IAudio | null = null;
 
     constructor() {
         makeObservable(this, {
@@ -14,7 +14,6 @@ export class AudioStore {
     }
 
     filterAudio = (audio: number) => {
-
         const selectedAudio = AudioTracks[audio]
         this.playThisAudio(selectedAudio);
     }
@@ -29,6 +28,4 @@ export class AudioStore {
             this.auidoEx = null;
         }
     }
-
-
 }
