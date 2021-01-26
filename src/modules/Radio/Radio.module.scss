@@ -51,6 +51,18 @@
     .canvas {
         padding-top: 150px;
     }
+    .btn {
+        min-width: 10px;
+        min-height: 2px;
+        background-color: #000000;
+        color: #1fc063;
+        border: 1px solid #1fc063;
+        font-size: 14px;
+        font-family: 'monofonto';
+    }
+    .btn:active, .btn:focus {
+        outline: none;
+    }
 }
 
 .active {

@@ -4,7 +4,7 @@ import { AudioTracks } from '../../library/utils/utils';
 
 export class AudioStore {
     public auidoEx: string = '-';
-    public playing: boolean = false;
+    public playing: number = 0;
 
     public currentActive: Array<any> = [
         { active: true },
@@ -30,6 +30,6 @@ export class AudioStore {
             el.active = false
         });
         this.currentActive[audio].active = true;
-        this.playing = true;
+        this.playing = this.playing + 1;
     }
 }

@@ -4,6 +4,7 @@ import { AudioList } from './AudioList/AudioList';
 import { RadioWave } from './RadioWave/RadioWave';
 
 export const Radio = () => {
+
     return (
         <div className={styles.radioWrapper}>
             <div className={styles.content}>
