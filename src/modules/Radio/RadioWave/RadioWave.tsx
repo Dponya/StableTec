@@ -2,12 +2,13 @@ import React, { useRef, useEffect, useState } from 'react';
 import { useStore } from '../../../main/stores/storeHooks';
 import WaveSurfer from 'wavesurfer.js'
 import styles from '../Radio.module.scss';
-import { AudioTracks } from '../../../library/utils/utils';
+import { observer } from 'mobx-react-lite';
 
 
-export const RadioWave = () => {
+export const RadioWave = observer(() => {
     let [waveSurfer, setWaveSurfer] = useState<any>(null);
     let [isPlaying, setIsPlaying] = useState(false);
+    const audio = useStore('audioStore');
 
     useEffect(() => {
         setWaveSurfer(WaveSurfer.create({
@@ -24,9 +25,9 @@ export const RadioWave = () => {
 
     useEffect(() => {
         if (waveSurfer) {
-            waveSurfer.load(AudioTracks[0])
+            waveSurfer.load(audio.auidoEx);
         }
-    }, [waveSurfer])
+    }, [audio.auidoEx])
 
     const togglePlayPause = () => {
         waveSurfer.playPause()
@@ -40,4 +41,4 @@ export const RadioWave = () => {
             <button onClick={() => togglePlayPause()}>{isPlaying ? '||' : '+'}</button>
         </>
     )
-}
+})

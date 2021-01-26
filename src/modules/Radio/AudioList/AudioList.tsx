@@ -11,9 +11,9 @@ export const AudioList = () => {
             <ul>
                 <li className={styles.radioText} onClick={() => audio.filterAudio(Audios.AlreadyOneYear)}>Already One Year -  (jazzy cover for the Fallout: Equestria radio play adaptation, featuring EileMonty)</li>
                 <li className={styles.radioText} onClick={() => audio.filterAudio(Audios.DareMaster)}>Dare Master - (The Wasteland Wailers)</li>
-                <li className={styles.radioText}>Blue Moon (Fallout: Equestria) - SkyBolt - (Frank Sinatra, Ponified)</li>
-                <li className={styles.radioText}>One Last Dance ( ͡° ͜ʖ ͡°) - The Balefire Symphony</li>
-                <li className={styles.radioText}>Big Iron (Fallout: Equestria) - SkyBolt - (Marty Robbins, Ponified)</li>
+                <li className={styles.radioText} onClick={() => audio.filterAudio(Audios.BlueMoon)}>Blue Moon (Fallout: Equestria) - SkyBolt - (Frank Sinatra, Ponified)</li>
+                <li className={styles.radioText} onClick={() => audio.filterAudio(Audios.OneLastDance)}>One Last Dance ( ͡° ͜ʖ ͡°) - The Balefire Symphony</li>
+                <li className={styles.radioText} onClick={() => audio.filterAudio(Audios.BigIron)}>Big Iron (Fallout: Equestria) - SkyBolt - (Marty Robbins, Ponified)</li>
             </ul>
         </div>
     )
