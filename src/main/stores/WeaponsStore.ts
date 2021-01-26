@@ -29,7 +29,5 @@ export class WeaponsStore {
             el.active = false
         });
         this.currentActive[key].active = true;
-        console.log(this.currentActive);
-        console.log(key)
     }
 }

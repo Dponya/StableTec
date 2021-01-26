@@ -10,7 +10,6 @@
     color:#1fc063;
     font-family: 'monofonto';
     font-size: 24px;
-    padding-bottom: 60px;
     letter-spacing: 1px;
     cursor: pointer;
 }
@@ -52,4 +51,20 @@
     .canvas {
         padding-top: 150px;
     }
+}
+
+.active {
+    display: flex;
+    justify-content: center;
+    outline: 2px solid #1fc063;
+    background: rgba(25, 255, 129, 0.2);
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+.nonactive {
+    list-style: none;
+    border: none;
+    margin-bottom: 60px;
+    opacity: 0.4;
 }

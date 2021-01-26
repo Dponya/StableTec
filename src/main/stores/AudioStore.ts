@@ -3,11 +3,21 @@ import { IAudio } from '../../library/common/Typing/interfaces';
 import { AudioTracks } from '../../library/utils/utils';
 
 export class AudioStore {
-    public auidoEx: string | null = '-';
+    public auidoEx: string = '-';
+    public playing: boolean = false;
+
+    public currentActive: Array<any> = [
+        { active: true },
+        { active: false },
+        { active: false },
+        { active: false },
+        { active: false },
+    ]
 
     constructor() {
         makeObservable(this, {
             auidoEx: observable,
+            currentActive: observable,
             filterAudio: action,
         })
     }
@@ -15,6 +25,11 @@ export class AudioStore {
     filterAudio = (audio: number) => {
         const selectedAudio = AudioTracks[audio]
         this.auidoEx = selectedAudio;
-        console.log(this.auidoEx);
+
+        this.currentActive.forEach(el => {
+            el.active = false
+        });
+        this.currentActive[audio].active = true;
+        this.playing = true;
     }
 }
