@@ -1,41 +1,38 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useStore } from '../../../main/stores/storeHooks';
+import WaveSurfer from 'wavesurfer.js'
 import styles from '../Radio.module.scss';
 import { AudioTracks } from '../../../library/utils/utils';
 
+
 export const RadioWave = () => {
-    const waveDiv = useRef<any>(null);
+    let [waveSurfer, setWaveSurfer] = useState<any>(null);
+    let [isPlaying, setIsPlaying] = useState(false);
 
-    const checkClick = () => {
-        let context, analyser: any, src, array;
-        const audio = new Audio(AudioTracks[0])
-        audio.play()
-        /// preparation
-        context = new AudioContext();
-        analyser = context.createAnalyser();
-        src = context.createMediaElementSource(audio);
-        src.connect(analyser);
-        analyser.connect(context.destination);
-        /// loop
-        function loop() {
-            window.requestAnimationFrame(loop);
-            array = new Uint8Array(analyser.frequencyBinCount);
-            analyser.getByteFrequencyData(array);
+    useEffect(() => {
+        setWaveSurfer(WaveSurfer.create({
+            container: '#waveform'
+        }))
+    }, [])
 
-            waveDiv.current.style.height = (array[40]) + "px";
-            waveDiv.current.style.width = (array[40]) + "px";
+    useEffect(() => {
+        if (waveSurfer) {
+            waveSurfer.load(AudioTracks[0])
         }
-        loop();
-    }
+    }, [waveSurfer])
 
-    const preparation = () => {
+    const togglePlayPause = () => {
+        waveSurfer.playPause()
+        setIsPlaying(!isPlaying)
     }
 
     return (
-        <div className={styles.radioWaveGraph}>
-            <div className={styles.wave}>
+        <>
+            <div className={styles.radioWaveGraph}>
             </div>
-            <div ref={waveDiv} style={{ backgroundColor: "red", width: "100%", height: "3px" }} onClick={checkClick}></div>
-        </div>
+            <div id="waveform" ></div>
+            <button onClick={() => togglePlayPause()}>{isPlaying ? '||' : '+'}</button>
+        </>
+
     )
 }
