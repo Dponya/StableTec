@@ -3,11 +3,11 @@ import { IAudio } from '../../library/common/Typing/interfaces';
 import { AudioTracks } from '../../library/utils/utils';
 
 export class AudioStore {
-    public auidoEx: string = '-';
+    public auidoEx: string | null = null;
     public playing: number = 0;
 
     public currentActive: Array<any> = [
-        { active: true },
+        { active: false },
         { active: false },
         { active: false },
         { active: false },
@@ -18,6 +18,7 @@ export class AudioStore {
         makeObservable(this, {
             auidoEx: observable,
             currentActive: observable,
+            playing: observable,
             filterAudio: action,
         })
     }

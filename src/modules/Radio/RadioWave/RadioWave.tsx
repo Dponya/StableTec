@@ -34,10 +34,10 @@ export const RadioWave = observer(() => {
         waveSurfer.playPause()
         setIsPlaying(!isPlaying)
     }
-
     return (
         <>
             <div className={styles.radioWaveGraph}>
+                {audio.auidoEx === null ? <button className={styles.btn}>{audio.auidoEx !== null ? 'Music selected!' : 'Select music in left list!'}</button> : null}
                 <div id="waveform" className={styles.canvas}></div>
                 <button onClick={() => togglePlayPause()} className={styles.btn}>{isPlaying ? 'Stop!' : 'Play!'}</button>
             </div>
