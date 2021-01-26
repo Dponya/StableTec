@@ -11,7 +11,14 @@ export const RadioWave = () => {
 
     useEffect(() => {
         setWaveSurfer(WaveSurfer.create({
-            container: '#waveform'
+            container: '#waveform',
+            waveColor: '#1fc063',
+            barWidth: 6,
+            barHeight: 2,
+            progressColor: '#1fc63',
+            cursorColor: '#00000',
+            cursorWidth: 0.1,
+            hideScrollbar: true
         }))
     }, [])
 
@@ -25,14 +32,12 @@ export const RadioWave = () => {
         waveSurfer.playPause()
         setIsPlaying(!isPlaying)
     }
-
     return (
         <>
             <div className={styles.radioWaveGraph}>
+                <div id="waveform" className={styles.canvas}></div>
             </div>
-            <div id="waveform" ></div>
             <button onClick={() => togglePlayPause()}>{isPlaying ? '||' : '+'}</button>
         </>
-
     )
 }
