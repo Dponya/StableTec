@@ -44,10 +44,12 @@
 }
 
 .radioWaveGraph {
+    position: relative;
     min-width: 400px;
     min-height: 400px;
     border-bottom: 8px dashed #1fc063;
     border-right: 8px dashed #1fc063;
+    opacity: 0.8;
     .canvas {
         padding-top: 130px;
     }

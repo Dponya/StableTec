@@ -1,9 +1,56 @@
-.weatherWrapper {
-    grid-area: cont;
-    padding: 5px;
+.weatherWrapper {    
+    /* display: flex; */
 }
 
 .weatherText {
     color: #1fc063;
     text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    .blockContainer {
+        border: 8px dashed #1fc063;
+        width: 250px;
+        height: 200px;
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+                .contentInformation {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #1fc063;
+                    font-size: 24px;
+                    font-family: 'monofonto';
+                        p {
+                            margin-left: 13px;
+                            color: #1fc063;
+                            font-family: 'monofonto';
+                            font-size: 24px;
+                            text-shadow: none;
+                        }
+                }
+                .contentWeather {
+                    display: flex;
+                    flex-direction: column;
+                    color: #1fc063;
+                    p {
+                        margin-left: 13px;
+                        color: #1fc063;
+                        font-family: 'monofonto';
+                        font-size: 24px;
+                        text-shadow: none;
+                    }
+                    .faCloud {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+
+        }
+    }    
 }

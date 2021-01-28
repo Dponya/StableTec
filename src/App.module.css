@@ -4,8 +4,8 @@
     "h"
     "cont"
     "f";
-    grid-template-rows: 1fr 12fr 2fr;
-    grid-template-columns: 1fr;   
+    grid-template-rows: 1fr 17fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 .appStyles {

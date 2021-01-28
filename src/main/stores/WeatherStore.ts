@@ -25,6 +25,7 @@ export class WeatherStore {
         try {
             const manehattenCity = await weatherGet(`London`);
             runInAction(() => {
+                console.log(manehattenCity.data)
                 this.cities[0].weatherOne = manehattenCity.data.weather[0].main;
                 this.cities[0].weatherTwo = manehattenCity.data.weather[0].description;
             })
