@@ -10,22 +10,23 @@
 .container {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 40px;
+    margin-top: 30px;
     .blockContainer {
         border: 8px dashed #1fc063;
-        width: 250px;
-        height: 200px;
+        width: 400px;
+        height: 220px;
         .content {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-evenly;
                 .contentInformation {
                     display: flex;
-                    justify-content: center;
+                    justify-content: flex-start;
                     align-items: center;
                     color: #1fc063;
                     font-size: 24px;
                     font-family: 'monofonto';
+                    margin-left: 23px;
                         p {
                             margin-left: 13px;
                             color: #1fc063;
@@ -38,16 +39,23 @@
                     display: flex;
                     flex-direction: column;
                     color: #1fc063;
+                    margin-bottom: 50px;
+                        .contentPrecipitation {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                                .faCloud {
+                                    width: 40px;
+                                    height: 40px;
+                                    padding-left: 20px;
+                                }
+                        }
                     p {
-                        margin-left: 13px;
+                        margin-left: 15px;
                         color: #1fc063;
                         font-family: 'monofonto';
                         font-size: 24px;
                         text-shadow: none;
-                    }
-                    .faCloud {
-                        width: 40px;
-                        height: 40px;
                     }
                 }
 

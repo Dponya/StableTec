@@ -4,13 +4,13 @@ import { weatherGet } from '../../library/common/api/WeatherAPIService';
 interface IWeather {
     name: string;
     weatherOne: any;
-    weatherTwo: any;
+    weatherTemp: number;
 }
 
 export class WeatherStore {
     public cities: IWeather[] = [
-        { name: 'Manehatten', weatherOne: '', weatherTwo: '' },
-        { name: 'Fillydelphia', weatherOne: '', weatherTwo: '' }
+        { name: 'Manehatten', weatherOne: '', weatherTemp: 0 },
+        { name: 'Fillydelphia', weatherOne: '', weatherTemp: 0 }
     ];
 
     constructor() {
@@ -27,7 +27,7 @@ export class WeatherStore {
             runInAction(() => {
                 console.log(manehattenCity.data)
                 this.cities[0].weatherOne = manehattenCity.data.weather[0].main;
-                this.cities[0].weatherTwo = manehattenCity.data.weather[0].description;
+                this.cities[0].weatherTemp = manehattenCity.data.main.temp;
             })
         }
         catch (e: any) {
@@ -40,7 +40,7 @@ export class WeatherStore {
             const fillydelphiaCity = await weatherGet(`Philadelphia`);
             runInAction(() => {
                 this.cities[1].weatherOne = fillydelphiaCity.data.weather[0].main;
-                this.cities[1].weatherTwo = fillydelphiaCity.data.weather[0].description;
+                this.cities[1].weatherTemp = fillydelphiaCity.data.main.temp;
             })
         }
         catch (e: any) {
