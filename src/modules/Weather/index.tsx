@@ -2,10 +2,9 @@ import { observer } from 'mobx-react-lite';
 import React, { useEffect, useState } from 'react';
 import { useStore } from '../../main/stores/storeHooks';
 import styles from './Weather.module.scss'
-import { SpecialImages } from '../../library/utils/utils';
-import { FaCity, FaCloudRain, FaTemperatureLow } from "react-icons/fa";
+import { FaCity, FaCloudRain, FaCloud, FaSun, FaSnowflake } from "react-icons/fa";
 import { GiDeathcab } from 'react-icons/gi'
-import { WiThermometer } from 'react-icons/wi'
+import { WiThermometer, WiCloud } from 'react-icons/wi'
 
 export const Weather = observer(() => {
     const weather = useStore('weatherStore');
@@ -13,6 +12,10 @@ export const Weather = observer(() => {
     useEffect(() => {
         weather.fetchManehatten();
         weather.fetchFillydelphia();
+        weather.fetchCanterlot();
+        weather.fetchBaltimare();
+        weather.fetchHoofington();
+        weather.fetchVanhoover();
     }, [weather]);
 
     return (
@@ -27,8 +30,11 @@ export const Weather = observer(() => {
                         <div className={styles.contentWeather}>
                             <p> Weather in City:</p>
                             <div className={styles.contentPrecipitation}>
-                                <FaCloudRain className={styles.faCloud} />
-                                <p>Rain</p>
+                                {weather.cities[0].weatherOne === 'Clouds' ? <FaCloud className={styles.faCloud} /> : null}
+                                {weather.cities[0].weatherOne === 'Rain' ? <FaCloudRain className={styles.faCloud} /> : null}
+                                {weather.cities[0].weatherOne === 'Clear' ? <FaSun className={styles.faCloud} /> : null}
+                                {weather.cities[0].weatherOne === 'Snow' ? <FaSnowflake className={styles.faCloud} /> : null}
+                                <p>{weather.cities[0].weatherOne}</p>
                                 <WiThermometer className={styles.faCloud} />
                                 <p>{weather.cities[0].weatherTemp}K</p>
                             </div>
@@ -44,8 +50,11 @@ export const Weather = observer(() => {
                         <div className={styles.contentWeather}>
                             <p> Weather in City:</p>
                             <div className={styles.contentPrecipitation}>
-                                <FaCloudRain className={styles.faCloud} />
-                                <p>Rain</p>
+                                {weather.cities[1].weatherOne === 'Clouds' ? <FaCloud className={styles.faCloud} /> : null}
+                                {weather.cities[1].weatherOne === 'Rain' ? <FaCloudRain className={styles.faCloud} /> : null}
+                                {weather.cities[1].weatherOne === 'Clear' ? <FaSun className={styles.faCloud} /> : null}
+                                {weather.cities[1].weatherOne === 'Snow' ? <FaSnowflake className={styles.faCloud} /> : null}
+                                <p>{weather.cities[1].weatherOne}</p>
                                 <WiThermometer className={styles.faCloud} />
                                 <p>{weather.cities[1].weatherTemp}K</p>
                             </div>
@@ -63,10 +72,10 @@ export const Weather = observer(() => {
                         <div className={styles.contentWeather}>
                             <p> Weather in City:</p>
                             <div className={styles.contentPrecipitation}>
-                                <FaCloudRain className={styles.faCloud} />
-                                <p>Rain</p>
+                                {weather.cities[2].weatherOne === 'Rain' ? <FaCloudRain className={styles.faCloud} /> : <FaCloud className={styles.faCloud} />}
+                                <p>Pink clouds</p>
                                 <WiThermometer className={styles.faCloud} />
-                                <p>+243K</p>
+                                <p>{weather.cities[2].weatherTemp}K</p>
                             </div>
                         </div>
                     </div>
@@ -80,10 +89,13 @@ export const Weather = observer(() => {
                         <div className={styles.contentWeather}>
                             <p> Weather in City:</p>
                             <div className={styles.contentPrecipitation}>
-                                <FaCloudRain className={styles.faCloud} />
-                                <p>Rain</p>
+                                {weather.cities[3].weatherOne === 'Clouds' ? <FaCloud className={styles.faCloud} /> : null}
+                                {weather.cities[3].weatherOne === 'Rain' ? <FaCloudRain className={styles.faCloud} /> : null}
+                                {weather.cities[3].weatherOne === 'Clear' ? <FaSun className={styles.faCloud} /> : null}
+                                {weather.cities[3].weatherOne === 'Snow' ? <FaSnowflake className={styles.faCloud} /> : null}
+                                <p>{weather.cities[3].weatherOne}</p>
                                 <WiThermometer className={styles.faCloud} />
-                                <p>{weather.cities[1].weatherTemp}K</p>
+                                <p>{weather.cities[3].weatherTemp}K</p>
                             </div>
                         </div>
                     </div>
@@ -99,10 +111,13 @@ export const Weather = observer(() => {
                         <div className={styles.contentWeather}>
                             <p> Weather in City:</p>
                             <div className={styles.contentPrecipitation}>
-                                <FaCloudRain className={styles.faCloud} />
-                                <p>Rain</p>
+                                {weather.cities[4].weatherOne === 'Clouds' ? <FaCloud className={styles.faCloud} /> : null}
+                                {weather.cities[4].weatherOne === 'Rain' ? <FaCloudRain className={styles.faCloud} /> : null}
+                                {weather.cities[4].weatherOne === 'Clear' ? <FaSun className={styles.faCloud} /> : null}
+                                {weather.cities[4].weatherOne === 'Snow' ? <FaSnowflake className={styles.faCloud} /> : null}
+                                <p>{weather.cities[4].weatherOne}</p>
                                 <WiThermometer className={styles.faCloud} />
-                                <p>{weather.cities[1].weatherTemp}K</p>
+                                <p>{weather.cities[4].weatherTemp}K</p>
                             </div>
                         </div>
                     </div>
@@ -116,10 +131,13 @@ export const Weather = observer(() => {
                         <div className={styles.contentWeather}>
                             <p> Weather in City:</p>
                             <div className={styles.contentPrecipitation}>
-                                <FaCloudRain className={styles.faCloud} />
-                                <p>Rain</p>
+                                {weather.cities[5].weatherOne === 'Clouds' ? <FaCloud className={styles.faCloud} /> : null}
+                                {weather.cities[5].weatherOne === 'Rain' ? <FaCloudRain className={styles.faCloud} /> : null}
+                                {weather.cities[5].weatherOne === 'Clear' ? <FaSun className={styles.faCloud} /> : null}
+                                {weather.cities[5].weatherOne === 'Snow' ? <FaSnowflake className={styles.faCloud} /> : null}
+                                <p>{weather.cities[5].weatherOne}</p>
                                 <WiThermometer className={styles.faCloud} />
-                                <p>{weather.cities[1].weatherTemp}K</p>
+                                <p>{weather.cities[5].weatherTemp}K</p>
                             </div>
                         </div>
                     </div>
