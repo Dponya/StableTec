@@ -10,7 +10,7 @@ type Inputs = {
 export const Console: React.FC = () => {
     const todo = useStore('todoStore');
     const { register, handleSubmit } = useForm<Inputs>();
-    const onSubmit = (data: SubmitHandler<Record<string, any>>) => todo.consoleFilter(data)
+    const onSubmit = (data: { command: string }) => todo.consoleFilter(data)
 
     return (
         <div className={styles.dataWrapper}>

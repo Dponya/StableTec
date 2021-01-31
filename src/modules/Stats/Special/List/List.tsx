@@ -4,7 +4,7 @@ import { observer } from 'mobx-react-lite';
 import { ISpecialList } from '../../../../library/common/Typing/interfaces';
 
 interface IListProps {
-    setActive: (i: any) => void;
+    setActive: (i: string) => void;
     specialList: ISpecialList[]
 }
 

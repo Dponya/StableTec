@@ -1,19 +1,19 @@
 import { SubmitHandler } from 'react-hook-form';
 
 export interface ITask {
-    id: any;
+    id: number | string;
     filteredTask: string
 }
 
 export interface ISpecialList {
-    id: any;
+    id: string;
     name: string;
     lvl: string;
     active: boolean;
 }
 
 export interface ISpecialTextImage {
-    img: any;
+    img: string;
     text: string
 }
 

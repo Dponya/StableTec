@@ -2,10 +2,14 @@ import { action, makeObservable, observable } from 'mobx';
 import { IAudio } from '../../library/common/Typing/interfaces';
 import { AudioTracks } from '../../library/utils/utils';
 
+interface ICurrentActive {
+    active: boolean
+}
+
 export class AudioStore {
     public auidoEx: string | null = null;
 
-    public currentActive: Array<any> = [
+    public currentActive: Array<ICurrentActive> = [
         { active: false },
         { active: false },
         { active: false },

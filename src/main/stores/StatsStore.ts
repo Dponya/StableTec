@@ -37,7 +37,7 @@ export class StatsStore {
             el.active = false
         })
 
-        const validate = (el: any) => {
+        const validate = (el: { id: string }) => {
             return el.id === id
         }
         this.specialList.find(validate)!.active ? this.specialList.find(validate)!.active = false :

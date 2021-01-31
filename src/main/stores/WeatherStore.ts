@@ -3,7 +3,7 @@ import { weatherGet } from '../../library/common/api/WeatherAPIService';
 
 interface IWeather {
     name: string;
-    weatherOne: any;
+    weatherOne: string;
     weatherTemp: number;
 }
 
@@ -40,8 +40,8 @@ export class WeatherStore {
                 console.log(this.cities[0].weatherOne === 'Rain')
             })
         }
-        catch (e: any) {
-            console.log(e);
+        catch (Error) {
+            console.log(Error.message);
         }
     }
 
@@ -53,8 +53,8 @@ export class WeatherStore {
                 this.cities[1].weatherTemp = fillydelphiaCity.data.main.temp;
             })
         }
-        catch (e: any) {
-            console.log(e);
+        catch (Error) {
+            console.log(Error.message);
         }
     }
 
@@ -66,8 +66,8 @@ export class WeatherStore {
                 this.cities[2].weatherTemp = canterlotCity.data.main.temp;
             })
         }
-        catch (e: any) {
-            console.log(e);
+        catch (Error) {
+            console.log(Error.message);
         }
     }
 
@@ -79,8 +79,8 @@ export class WeatherStore {
                 this.cities[3].weatherTemp = canterlotCity.data.main.temp;
             })
         }
-        catch (e: any) {
-            console.log(e);
+        catch (Error) {
+            console.log(Error.message);
         }
     }
 
@@ -92,8 +92,8 @@ export class WeatherStore {
                 this.cities[4].weatherTemp = canterlotCity.data.main.temp;
             })
         }
-        catch (e: any) {
-            console.log(e);
+        catch (Error) {
+            console.log(Error.message);
         }
     }
 
@@ -105,8 +105,8 @@ export class WeatherStore {
                 this.cities[5].weatherTemp = canterlotCity.data.main.temp;
             })
         }
-        catch (e: any) {
-            console.log(e);
+        catch (Error) {
+            console.log(Error.message);
         }
     }
 

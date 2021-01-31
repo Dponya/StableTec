@@ -13,21 +13,11 @@ export class TodoStore {
     constructor() {
         makeObservable(this, {
             tasks: observable,
-            addTodo: action,
-            deleteTodo: action
         });
     }
 
-    addTodo = (task: any): void => {
-        let filteredTask = task.example;
-        this.tasks.push({ id: uuid(), filteredTask })
-    }
-
-    deleteTodo = (id: number) => {
-        this.tasks = this.tasks.filter(todo => todo.id !== id)
-    }
-
-    consoleFilter = (command: any) => {
+    consoleFilter = (command: { command: string }) => {
+        console.log(command);
         const notFilteredText = command.command;
         const splitedCommandText = notFilteredText.split(' ')[0]
         const splitedValueText = notFilteredText.split(' ')[1]
