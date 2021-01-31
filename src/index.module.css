@@ -9,4 +9,6 @@ html, body::before {
 .allApp {
         margin: 0;
         padding: 0;
+        max-height: 1920px;
+        max-width: 1280px;
 }

@@ -4,11 +4,9 @@ import styles from './Footer.module.scss'
 export const Footer = () => {
     return (
         <div className={styles.footerWrapper}>
-            <p className={styles.footerTextAndOrder}>
-                <span>HP 115/115 </span>
-                <span>Level 24 </span>
-                <span>AP 90/90 </span>
-            </p>
+            <div className={styles.footerBlock}><span className={styles.footerTextAndOrder}>HP 115/115 </span></div>
+            <div className={styles.footerBlock}><span className={styles.footerTextAndOrder}>Level 24</span><div className={styles.lvlblock}></div></div>
+            <div className={styles.footerBlock}><span className={styles.footerTextAndOrder}>AP 90/90</span></div>
         </div>
     )
 }
