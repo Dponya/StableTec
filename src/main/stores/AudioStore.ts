@@ -4,7 +4,6 @@ import { AudioTracks } from '../../library/utils/utils';
 
 export class AudioStore {
     public auidoEx: string | null = null;
-    public playing: number = 0;
 
     public currentActive: Array<any> = [
         { active: false },
@@ -18,7 +17,6 @@ export class AudioStore {
         makeObservable(this, {
             auidoEx: observable,
             currentActive: observable,
-            playing: observable,
             filterAudio: action,
         })
     }
@@ -31,6 +29,5 @@ export class AudioStore {
             el.active = false
         });
         this.currentActive[audio].active = true;
-        this.playing = this.playing + 1;
     }
 }

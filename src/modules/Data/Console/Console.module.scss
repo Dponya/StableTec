@@ -6,7 +6,7 @@
     grid-template-rows: 1fr 10fr 4fr;
     grid-template-columns: 1fr;
     grid-gap: 0px;
-    border: 2px solid #1fc063;
+    border: 8px dashed #1fc063;
     max-height: 600px;
     width: 1200px;
     display: flex;
@@ -40,7 +40,6 @@ input:focus{
     line-height: 1.2;
       font-family:"VT323",monospace;
       color: #1fc063;
-      text-shadow: 0 0 10px #C8C8C8;
 }
 .console{
   padding:15px;
