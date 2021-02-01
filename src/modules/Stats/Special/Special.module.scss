@@ -4,8 +4,12 @@
     "l c";
     grid-template-rows: 60px 1fr;
     grid-template-columns: 10fr 10fr;
-    grid-gap: 0px;
     grid-area: cont;
     padding: 55px;
     margin: 5px;
+}
+
+.centralizeWrapper {
+    display: flex;
+    justify-content: center;
 }

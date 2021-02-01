@@ -2,18 +2,19 @@
     grid-area: f;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 25px;
 }
 
 .footerBlock {
     border: 3px solid #1fc063;
     height: 40px;
-    width: 600px;
+    width: 500px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    margin: 20px;
     .lvlblock {
         height: 20px;
         width: 100px;

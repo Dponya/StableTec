@@ -3,6 +3,8 @@
 .headerWrapper {
     grid-area: h;
     border-bottom: 3px solid #1fc063;
+    display: flex;
+    justify-content: center;
 }
 
 .headerOrder {
@@ -13,6 +15,8 @@
 }
 
 .headerText {
+    margin-right: 70px;
+    margin-left: 70px;
     font-family: 'monofonto';
     text-decoration: none;
     color: #1fc063;

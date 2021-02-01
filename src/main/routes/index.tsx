@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { Header, Data, Stats, Footer, Map, Inventory, Radio, Weather } from '../../modules/index';
+import { Header, Data, Stats, Footer, Inventory, Radio, Weather } from '../../modules/index';
 import styles from '../../App.module.css'
 
 export const Routes = () => {
@@ -19,10 +19,6 @@ export const Routes = () => {
 
             <Route path={'/data'}>
                 <Data />
-            </Route>
-
-            <Route path={'/map'}>
-                <Map />
             </Route>
 
             <Route path={'/radio'}>

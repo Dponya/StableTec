@@ -1,5 +1,7 @@
 .weatherWrapper {    
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .weatherText {
@@ -9,12 +11,15 @@
 
 .container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: center;
     margin-top: 30px;
     .blockContainer {
         border: 8px dashed #1fc063;
         width: 400px;
         height: 220px;
+        margin-right: 100px;
+        margin-left: 100px;
         .content {
             display: flex;
             flex-direction: column;

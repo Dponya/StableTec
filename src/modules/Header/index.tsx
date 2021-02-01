@@ -18,10 +18,6 @@ export const Header = () => {
                     <span>Data </span>
                 </NavLink>
 
-                <NavLink to={'/map'} className={styles.headerText}>
-                    <span>Map </span>
-                </NavLink>
-
                 <NavLink to={'/radio'} className={styles.headerText}>
                     <span>Radio </span>
                 </NavLink>

@@ -8,9 +8,11 @@ import { useStore } from '../../../main/stores/storeHooks';
 export const Special = observer(() => {
     let stats = useStore('statsStore');
     return (
-        <div className={styles.specialWrapper}>
-            <List setActive={stats.setActive} specialList={stats.specialList} />
-            <Content currentImgTextId={stats.currentImgTexId} />
+        <div className={styles.centralizeWrapper}>
+            <div className={styles.specialWrapper}>
+                <List setActive={stats.setActive} specialList={stats.specialList} />
+                <Content currentImgTextId={stats.currentImgTexId} />
+            </div>
         </div>
     )
 })
