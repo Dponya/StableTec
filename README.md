@@ -8,4 +8,4 @@ The LittlePip images were borrowed from Fallout Equestria: Remains.
 
 
 # Demo Version of project:
-  Netlify deploy: https://festive-mestorf-2e9012.netlify.app/stats
+  Netlify deploy: https://festive-mestorf-2e9012.netlify.app
