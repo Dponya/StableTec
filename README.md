@@ -5,3 +5,7 @@ The LittlePip images were borrowed from Fallout Equestria: Remains.
 # Installing the project  #npm install
 
 # Start the project  #npm start
+
+
+# Demo Version of project:
+  Netlify deploy: https://festive-mestorf-2e9012.netlify.app/stats
