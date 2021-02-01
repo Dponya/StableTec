@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useStore } from '../../../main/stores/storeHooks';
 import WaveSurfer from 'wavesurfer.js'
 import styles from '../Radio.module.scss';

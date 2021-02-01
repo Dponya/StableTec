@@ -22,3 +22,10 @@
     color: #1fc063;
     font-size: 30px;
 }
+
+.activeHeader {
+    outline: 2px solid #1fc063;
+    background: rgba(25, 255, 129, 0.2);
+    padding-right: 10px;
+    padding-left: 10px;
+}

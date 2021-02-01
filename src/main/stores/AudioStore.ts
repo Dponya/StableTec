@@ -1,5 +1,4 @@
 import { action, makeObservable, observable } from 'mobx';
-import { IAudio } from '../../library/common/Typing/interfaces';
 import { AudioTracks } from '../../library/utils/utils';
 
 interface ICurrentActive {

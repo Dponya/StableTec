@@ -1,4 +1,4 @@
-import { action, makeObservable, observable } from 'mobx';
+import { makeObservable, observable } from 'mobx';
 import { uuid } from 'uuidv4';
 import { ITask } from '../../library/common/Typing/interfaces';
 import { Commands, CommandsText } from '../../library/utils/utils';

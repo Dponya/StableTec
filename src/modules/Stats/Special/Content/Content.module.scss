@@ -12,7 +12,7 @@
 
 .contentText {
     font-family: 'monofonto';
-    font-size: 24px;
+    font-size: 20px;
     color: #1fc063;
 }
 
@@ -25,4 +25,12 @@
 .ImgPony {
     width: 250px;
     height: 250px;
+}
+
+@media (max-width: 1800px) {
+    .contentText {
+        font-family: 'monofonto';
+        font-size: 16px;
+        color: #1fc063;
+    }
 }

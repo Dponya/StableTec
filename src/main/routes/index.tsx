@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import { Header, Data, Stats, Footer, Inventory, Radio, Weather } from '../../modules/index';
 import styles from '../../App.module.css'
 
@@ -8,6 +8,8 @@ export const Routes = () => {
     return (
         <div className={styles.appWrapper}>
             <Header />
+
+            <Redirect from={'/'} to={'/stats'} />
 
             <Route path={'/stats'}>
                 <Stats />

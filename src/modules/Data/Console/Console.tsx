@@ -1,5 +1,5 @@
 import React from 'react'
-import { SubmitHandler, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useStore } from '../../../main/stores/storeHooks';
 import styles from './Console.module.scss';
 
