@@ -40,7 +40,7 @@ export const RadioWave = observer(() => {
                 waveSurfer.stop();
             }
         }
-    }, [audio.auidoEx]);
+    }, [waveSurfer, audio.auidoEx]);
 
     const togglePlayPause = () => {
         waveSurfer.playPause()

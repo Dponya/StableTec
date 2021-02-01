@@ -6,10 +6,10 @@ interface ICurrentActive {
 }
 
 export class AudioStore {
-    public auidoEx: string | null = null;
+    public auidoEx: string | null = AudioTracks[0];
 
     public currentActive: Array<ICurrentActive> = [
-        { active: false },
+        { active: true },
         { active: false },
         { active: false },
         { active: false },

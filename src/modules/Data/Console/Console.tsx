@@ -21,7 +21,7 @@ export const Console: React.FC = () => {
             <div className={styles.typeContent}>
                 <p className={styles.typing}>!(@*##@!#)!!@#*@!(#!*@(#!@*(#*!@(#*!(@)# <br />
                  Welcome! Its StableTec Corp. Terminal. Thanks for using StableTec! <br /> All rights reserved (c) @StableTec <br />
-                Available commands: <br /> todo <br />/////////<br /> {todo.commandState}</p>
+                Available commands: <br /> todo <br /><br /> {todo.commandState}</p>
             </div>
             <div>
                 <form onSubmit={handleSubmit(onSubmit)} className={styles.terminalInput}>
