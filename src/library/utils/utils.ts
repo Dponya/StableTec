@@ -67,3 +67,21 @@ export const AudioTracks: Record<number, string> = {
     [Audios.OneLastDance]: OneLastDance,
     [Audios.BigIron]: BigIron
 }
+
+export enum Cities {
+    Manehatten = 0,
+    Canterlot = 1,
+    Hoofington = 2,
+    Fillydelphia = 3,
+    Baltimare = 4,
+    Vanhoover = 5
+}
+
+export const CitiesId: Record<number, string> = {
+    [Cities.Manehatten]: '2643741',
+    [Cities.Canterlot]: '2634715',
+    [Cities.Hoofington]: '4990729',
+    [Cities.Fillydelphia]: '4440906',
+    [Cities.Baltimare]: '2966377',
+    [Cities.Vanhoover]: '5814616'
+}

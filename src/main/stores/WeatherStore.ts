@@ -1,5 +1,6 @@
 import { action, makeObservable, observable, runInAction } from 'mobx';
-import { weatherGet } from '../../library/common/api/WeatherAPIService';
+import { reqSeveralCities } from '../../library/common/api/WeatherAPIService';
+import { CitiesId } from '../../library/utils/utils';
 
 interface IWeather {
     name: string;
@@ -20,95 +21,23 @@ export class WeatherStore {
     constructor() {
         makeObservable(this, {
             cities: observable,
-            fetchManehatten: action,
-            fetchFillydelphia: action,
-            fetchCanterlot: action,
-            fetchBaltimare: action,
-            fetchHoofington: action,
-            fetchVanhoover: action
+            fetchCitites: action,
         });
     }
 
-    async fetchManehatten() {
+    async fetchCitites() {
         try {
-            const manehattenCity = await weatherGet(`London`);
+            const weather = [CitiesId[0], CitiesId[1], CitiesId[2], CitiesId[3], CitiesId[4], CitiesId[5]]
+            const severalCitites = await reqSeveralCities(weather)
             runInAction(() => {
-                console.log(manehattenCity.data)
-                this.cities[0].weatherOne = manehattenCity.data.weather[0].main;
-                this.cities[0].weatherTemp = manehattenCity.data.main.temp;
-                console.log(this.cities[0].weatherOne)
-                console.log(this.cities[0].weatherOne === 'Rain')
+                this.cities.forEach((element, index) => {
+                    element.weatherOne = severalCitites.data.list[index].weather[0].main;
+                    element.weatherTemp = severalCitites.data.list[index].main.temp;
+                })
             })
         }
         catch (Error) {
-            console.log(Error.message);
+            console.log(Error.message)
         }
     }
-
-    async fetchFillydelphia() {
-        try {
-            const fillydelphiaCity = await weatherGet(`Philadelphia`);
-            runInAction(() => {
-                this.cities[1].weatherOne = fillydelphiaCity.data.weather[0].main;
-                this.cities[1].weatherTemp = fillydelphiaCity.data.main.temp;
-            })
-        }
-        catch (Error) {
-            console.log(Error.message);
-        }
-    }
-
-    async fetchCanterlot() {
-        try {
-            const canterlotCity = await weatherGet(`Cameroon`);
-            runInAction(() => {
-                this.cities[2].weatherOne = canterlotCity.data.weather[0].main;
-                this.cities[2].weatherTemp = canterlotCity.data.main.temp;
-            })
-        }
-        catch (Error) {
-            console.log(Error.message);
-        }
-    }
-
-    async fetchBaltimare() {
-        try {
-            const canterlotCity = await weatherGet(`Baltimore`);
-            runInAction(() => {
-                this.cities[3].weatherOne = canterlotCity.data.weather[0].main;
-                this.cities[3].weatherTemp = canterlotCity.data.main.temp;
-            })
-        }
-        catch (Error) {
-            console.log(Error.message);
-        }
-    }
-
-    async fetchHoofington() {
-        try {
-            const canterlotCity = await weatherGet(`Detroit`);
-            runInAction(() => {
-                this.cities[4].weatherOne = canterlotCity.data.weather[0].main;
-                this.cities[4].weatherTemp = canterlotCity.data.main.temp;
-            })
-        }
-        catch (Error) {
-            console.log(Error.message);
-        }
-    }
-
-    async fetchVanhoover() {
-        try {
-            const canterlotCity = await weatherGet(`Vancouver`);
-            runInAction(() => {
-                this.cities[5].weatherOne = canterlotCity.data.weather[0].main;
-                this.cities[5].weatherTemp = canterlotCity.data.main.temp;
-            })
-        }
-        catch (Error) {
-            console.log(Error.message);
-        }
-    }
-
-
 }

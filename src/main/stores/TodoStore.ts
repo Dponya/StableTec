@@ -17,7 +17,6 @@ export class TodoStore {
     }
 
     consoleFilter = (command: { command: string }) => {
-        console.log(command);
         const notFilteredText = command.command;
         const splitedCommandText = notFilteredText.split(' ')[0]
         const splitedValueText = notFilteredText.split(' ')[1]

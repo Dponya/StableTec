@@ -1,7 +1,12 @@
+.centralizer {
+    display: flex;
+    justify-content: center;
+}
+
 .weatherWrapper {    
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    width: 1000px;
 }
 
 .weatherText {
@@ -10,20 +15,17 @@
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    padding-left: 40px;
     .blockContainer {
         border: 8px dashed #1fc063;
         width: 400px;
         height: 220px;
-        margin-right: 100px;
-        margin-left: 100px;
         .content {
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
                 .contentInformation {
                     display: flex;
                     justify-content: flex-start;
@@ -49,7 +51,7 @@
                             display: flex;
                             flex-direction: row;
                             align-items: center;
-                                .faCloud {
+                                .faIcon {
                                     width: 40px;
                                     height: 40px;
                                     padding-left: 20px;
