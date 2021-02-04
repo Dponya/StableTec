@@ -32,3 +32,19 @@
     background-color: #000000;
     border: 1px solid #1fc063;
 }
+
+@media (max-width: 1390px) {
+    .listWrapper {
+        max-width: 1350px;
+    }
+    .tableRow {
+        margin: 0.5em;
+    }
+    .listWrapper {
+        width: 700px;
+    }
+    .listText {
+        padding: 2px;
+        font-size: 22px;
+    }
+}

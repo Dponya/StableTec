@@ -8,9 +8,7 @@
 }
 
 .headerOrder {
-    padding: 5px;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -28,4 +26,19 @@
     background: rgba(25, 255, 129, 0.2);
     padding-right: 10px;
     padding-left: 10px;
+}
+
+
+@media (max-width: 1390px) {
+    .headerWrapper {
+        max-width: 1350px;
+    }
+    .headerText {
+        margin-right: 40px;
+        margin-left: 40px;
+        font-family: 'monofonto';
+        text-decoration: none;
+        color: #1fc063;
+        font-size: 26px;
+    }
 }

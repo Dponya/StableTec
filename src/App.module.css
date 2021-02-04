@@ -4,30 +4,7 @@
     "h"
     "cont"
     "f";
-    grid-template-rows: 1fr 15fr 1fr;
-}
-
-@media (max-width: 1390px) {
-  .appWrapper {
-    display: grid;
-    grid-template-areas:
-    "h"
-    "cont"
-    "f";
-    grid-template-rows: 1fr 6fr 1fr;
-    max-width: 1330px;
-    }
-}
-
-@media (max-width: 1680px) {
-  .appWrapper {
-    display: grid;
-    grid-template-areas:
-    "h"
-    "cont"
-    "f";
-    grid-template-rows: 1fr 9fr 1fr;
-    }
+    /* grid-template-rows: auto 15fr auto; */
 }
 
 .appStyles {

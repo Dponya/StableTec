@@ -29,3 +29,15 @@
     font-family: 'monofonto';
     font-size: 30px;
 }
+
+@media (max-width: 1390px) {
+    .footerWrapper {
+        max-width: 1350px;
+    }
+
+    .footerTextAndOrder {
+        color: #1fc063;
+        font-family: 'monofonto';
+        font-size: 26px;
+    }
+}

@@ -3,7 +3,7 @@
     grid-template-areas:
     "n"
     "cont";
-    grid-template-rows: 1fr 16fr 1fr; 
+    grid-template-rows: 1fr 19fr 1fr; 
 }
 
 .navbar {
@@ -17,4 +17,16 @@
     text-decoration: none;
     font-size: 30px;
     color: #1fc063;
+}
+
+@media (max-width: 1680px) {
+    .statsWrapper {
+        max-width: 1630px;
+    }
+}
+
+@media (max-width: 1390px) {
+    .statsWrapper {
+        max-width: 1300px;
+    }
 }

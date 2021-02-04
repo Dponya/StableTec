@@ -7,19 +7,20 @@
     border-top: 1px solid #1fc063;
     min-height: 478px;
     background-color: #000000;
-    align-items: center;
+    justify-content: center;
 }
 
 .contentText {
     font-family: 'monofonto';
     font-size: 20px;
     color: #1fc063;
+    padding: 20px;
 }
 
 .backgroundImg {
     width: 300px;
     height: 300px;
-    padding: 50px;
+    margin-left: 30%;
 }
 
 .ImgPony {
@@ -32,5 +33,28 @@
         font-family: 'monofonto';
         font-size: 16px;
         color: #1fc063;
+    }
+}
+
+@media (max-width: 1390px) {
+    .contentWrapper {
+        min-height: 317px;
+        margin-top: 6.4px;
+        min-width: 450px;
+        max-width: 1350px;
+    }
+    .ImgPony {
+        width: 150px;
+        height: 150px;
+    }
+    .backgroundImg {
+        margin-left: 30%;
+    }
+    .contentText {
+        font-family: 'monofonto';
+        font-size: 14px;
+        color: #1fc063;
+        /* padding-bottom: 50px; */
+        padding: 20px   ;
     }
 }
