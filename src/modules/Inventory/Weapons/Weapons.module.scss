@@ -52,3 +52,34 @@
 .content {
     border: 2px solid #1fc063;
 }
+
+@media (max-width: 1390px) {
+    .card {
+        background-color: #000000;
+        display: block;
+        width: 300px;
+        min-height: 130px;
+        cursor: pointer;
+        padding: 10px;
+        padding-right: 20px;
+        margin: 2px;
+        border: 2px solid #1fc063;
+    }
+
+    .weaponsWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 55px;
+        max-width: 1390px;
+        .img {
+            width: 220px;
+        }
+    }
+
+    .content {
+        max-width: 220px;
+        max-height: 220px;
+    }
+}

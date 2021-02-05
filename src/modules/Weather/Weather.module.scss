@@ -69,3 +69,66 @@
         }
     }    
 }
+
+@media (max-width: 1390px) {
+    .weatherWrapper {    
+        display: flex;
+        flex-wrap: wrap;
+        width: 800px;
+    }
+    .container {
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+        padding-left: 40px;
+        .blockContainer {
+            border: 5px dashed #1fc063;
+            width: 350px;
+            height: 190px;
+            .content {
+                display: flex;
+                flex-direction: column;
+                    .contentInformation {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        color: #1fc063;
+                        font-size: 24px;
+                        font-family: 'monofonto';
+                        margin-left: 12px;
+                            p {
+                                margin-left: 12px;
+                                color: #1fc063;
+                                font-family: 'monofonto';
+                                font-size: 20px;
+                                text-shadow: none;
+                            }
+                    }
+                    .contentWeather {
+                        display: flex;
+                        flex-direction: column;
+                        color: #1fc063;
+                        margin-bottom: 50px;
+                            .contentPrecipitation {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                    .faIcon {
+                                        width: 40px;
+                                        height: 40px;
+                                        padding-left: 20px;
+                                    }
+                            }
+                        p {
+                            margin-left: 15px;
+                            color: #1fc063;
+                            font-family: 'monofonto';
+                            font-size: 20px;
+                            text-shadow: none;
+                        }
+                    }
+    
+            }
+        }    
+    }
+}

@@ -96,3 +96,20 @@ input:focus{
     color: #1fc063;
   }
 }
+
+@media (max-width: 1390px) {
+  .dataWrapper {
+    grid-area: cont;
+    padding: 5px;
+    grid-template-areas:
+    "todo";
+    grid-template-rows: 1fr 10fr 4fr;
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+    border: 8px dashed #1fc063;
+    max-height: 600px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+}

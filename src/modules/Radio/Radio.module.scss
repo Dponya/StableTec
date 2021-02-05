@@ -44,7 +44,6 @@
 }
 
 .radioWaveGraph {
-    position: relative;
     min-width: 400px;
     min-height: 400px;
     border-bottom: 8px dashed #1fc063;
@@ -80,4 +79,33 @@
     border: none;
     margin-bottom: 60px;
     opacity: 0.4;
+}
+
+@media (max-width: 1390px) {
+    .radioText {
+        color:#1fc063;
+        font-family: 'monofonto';
+        font-size: 18px;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+    .list > ul {
+        width: 400px;
+    }
+
+    .radioWaveGraph {
+        border-bottom: 6px dashed #1fc063;
+        border-right: 6px dashed #1fc063;
+    }
+    .radioWrapper {
+        max-width: 1390px;
+        padding-right: 220px;
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+        grid-area: cont;
+        margin: 50px;
+        padding-right: 300px;
+    }
 }
