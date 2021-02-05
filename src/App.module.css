@@ -4,7 +4,7 @@
     "h"
     "cont"
     "f";
-    /* grid-template-rows: auto 15fr auto; */
+    grid-template-rows: 1fr 15fr 1fr;
 }
 
 .appStyles {
